@@ -1,0 +1,26 @@
+{% extends "baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+
+{% load static %}
+
+<form method = "POST">
+    {% csrf_token %}
+
+<div id="authUserName">
+{{ form.name }}
+</div>
+
+<div id="authPassword">
+{{ form.tip1 }}
+</div>
+
+<button id="scoreSubmitButton" class="yellowBackground" type="submit">
+    <img src="{% static 'icons/scoreSubmitBlue.svg' %}">
+  </button>
+
+</form>
+
+
+{% endblock %}

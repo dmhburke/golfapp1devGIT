@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>
+{% block **browserTitle** %}
+
+{% endblock %}
+</title>
+
+  <link rel="icon"
+      type="image/png"
+      href="https://static1.squarespace.com/static/582341fa9f7456df6245bfc3/t/5c4f856b0e2e72cc51579f43/1548715388714/_chequeredFlagBlue.png?format=1000w">
+<link href="https://fonts.googleapis.com/css?family=Racing+Sans+One" rel="stylesheet">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="icon"
+    type="image/png"
+    href="{% static 'styles.css' %}">
+
+</head>
+{% load static %}
+<body>
+  <div class="yellowBackground" id="header">
+    <div class="mobileContainer" id="headerContentContainer">
+
+        <a href="{% url 'landingpage'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/navHomeBlue.svg' %}"></div></a>
+        <!--Update--><a href="{% url 'scoringpage'%}"><div class="navIconContainer"><img class="navIconImage" id="leaderboardIcon" src="{% static 'icons/navLeaderboardBlue.svg' %}"></div></a>
+        <a href="{% url 'scoringpage'%}"><div class="navIconContainer"><img class="navIconImage" id="scoreIcon" src="{% static 'icons/navScoresBlue.svg' %}"></div></a>
+        <!--Update--><a href="{% url 'scoringpage'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/navEventsBlue.svg' %}"></div></a>
+        <a href="{% url 'login'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/navExitBlue.svg' %}"></div></a>
+
+    </div></div>
+
+
+    <div class="mobileContainer" id="bodyContentContainer">
+{% block content %}
+{% endblock %}
+
+    </div>
+
+
+  <div class="yellowBackground" id="footer">
+    <div class="mobileContainer" id="footerContentContainer">
+
+    </div></div>
+
+
+
+    <div id="dynamicPageName">
+  {% block pageName %}
+
+  {% endblock %}
+
+    </div>
+  </div>
+
+  <div id="superContentContainer">
+
+  {% block pageContent %}
+
+
+  {% endblock %}
+  </div>
+    </div>
+
+  </div>
+
+  </div>
+
+  </body>
+  </html>

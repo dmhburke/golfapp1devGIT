@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>
+Indy1200 | login
+</title>
+
+  <link rel="icon"
+      type="image/png"
+      href="">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="icon"
+    type="image/png"
+    href="{% static 'styles.css' %}">
+
+</head>
+
+<body>
+<div class="yellowBorder" id="loginContainer">
+  <div class = "blueText" id="loginText"> Welcome to the official site of the</div>
+  <div class="" id="loginIndy"></div>
+  <div id="loginEnter">
+    <div id="loginPassword">Password</div>
+    <a href="{% url 'landingpage' %}">
+    <div class ="blueBackground" id="loginButton">Enter</div></a>
+  </div>
+
+</div>
+
+<a href="http://127.0.0.1:8000/admin/" target="_blank">
+<div class="bigShadow" id="adminButton">
+  <img id="loginSettings" src="{% static 'icons/loginSettingsBlue.svg'%}">
+</div></a>
+
+
+
+</body>
+</html>

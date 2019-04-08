@@ -1,0 +1,45 @@
+{% extends "baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+<div id="scoringScrollContainer">
+<a href="{% url 'rd1holelist' %}">
+<div class="bigShadow scorepageButton" id="scorespageButtonRd1">
+  <div id="scorespageIconContainer"><img class="scoresIconImage" src="{% static 'icons/scoresGolfWhite.svg' %}"></div>
+  <div class="bold bigText whiteText" id="scorespageTextContainer">Brickyard Crossing</div>
+</div></a>
+
+<div class="bigShadow scorepageButton" id="scorespageButtonRd2">
+  <div id="scorespageIconContainer"><img class="scoresIconImage" src="{% static 'icons/scoresGolfWhite.svg' %}"></div>
+  <div class="bold bigText whiteText" id="scorespageTextContainer">Crooked Stick GC</div>
+  </div>
+
+  <div class="bigShadow scorepageButton" id="scorespageButtonRd3">
+    <div id="scorespageIconContainer"><img class="scoresIconImage" src="{% static 'icons/scoresGolfWhite.svg' %}"></div>
+    <div class="bold bigText whiteText" id="scorespageTextContainer">Prairie View</div>
+    </div>
+
+  <div class="bigShadow scorepageButton" id="scorespageButtonRacing">
+    <div id="scorespageIconContainer"><img class="scoresIconImage" id="scoresIconRacing" src="{% static 'icons/scoresRacingWhite.svg' %}"></div>
+    <div class="bold bigText whiteText" id="scorespageTextContainer">Go Karting</div>
+    </div>
+
+  <a href="{% url 'entertips'%}">
+  <div class="bigShadow scorepageButton" id="scorespageButtonTipping">
+    <div id="scorespageIconContainer"><img class="scoresIconImage" src="{% static 'icons/scoresTippingWhite.svg' %}"></div>
+    <div class="bold bigText whiteText" id="scorespageTextContainer">Sports Tipping</div>
+  </div></a>
+
+  <div class="bigShadow scorepageButton" id="scorespageButtonTopGolf">
+    <div id="scorespageIconContainer"><img class="scoresIconImage" src="{% static 'icons/scoresTopGolfWhite.svg' %}"></div>
+    <div class="bold bigText whiteText" id="scorespageTextContainer">Top Golf</div>
+  </div>
+
+  <div class="bigShadow scorepageButton" id="scorespageButtonSocial">
+    <div id="scorespageIconContainer"><img class="scoresIconImage" src="{% static 'icons/scoresSocialWhite.svg' %}"></div>
+    <div class="bold bigText whiteText" id="scorespageTextContainer">Social</div>
+  </div>
+
+
+</div>
+{% endblock %}
