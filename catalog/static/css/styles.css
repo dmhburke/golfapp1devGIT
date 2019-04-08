@@ -123,12 +123,12 @@ a:link {
 #header {
   border-bottom: 5px solid #051864;
   width: 100vw;
-  height: 120px;
+  height: 110px;
 }
 
 #headerContentContainer {
-  height: 115px;
-  padding-top: 20px;
+  height: 105px;
+  padding-top: 10px;
   padding-left: 7px;
   overflow: auto;
   white-space: nowrap;
