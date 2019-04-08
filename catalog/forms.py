@@ -1,5 +1,6 @@
 from django import forms
 from catalog.choices import *
+from django.forms.widgets import TextInput
 from django.forms import ModelForm
 from catalog.models import Rd1ScoreModel, PlayerModel, SportsTippingModel
 
@@ -19,9 +20,12 @@ class Rd1ScoreForm(ModelForm):
     slot11_score = forms.IntegerField(label='', required=False)
     slot12_score = forms.IntegerField(label='', required=False)
 
+    class MyTelephoneInput(TextInput):
+        input_type = 'tel'
+
     def __init__(self, *args, **kwargs):
         super(Rd1ScoreForm, self).__init__(*args, **kwargs)      
-        self.fields['slot1_score'].widget.attrs={'type': 'tel', 'id': 'player1', 'class':'scoreInputField'}
+        self.fields['slot1_score'].widget.attrs={'input_type': 'tel', 'id': 'player1', 'class':'scoreInputField'}
         self.fields['slot2_score'].widget.attrs={'type': 'tel', 'id': 'player2', 'class':'scoreInputField'}
         self.fields['slot3_score'].widget.attrs={'type': 'tel', 'id': 'player3', 'class':'scoreInputField'}
         self.fields['slot4_score'].widget.attrs={'type': 'tel', 'id': 'player4', 'class':'scoreInputField'}        
