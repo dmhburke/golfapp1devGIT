@@ -137,34 +137,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
-
-
-
-
-
-
-
-
-
-
-
-# connect to AWS S3 bucket
-#STATICFILES_DIRS = [
-#    os.path.join(BASE_DIR, 'static'),
-#]
-
-#AWS_ACCESS_KEY_ID = 'AKIA3DJ3DHADFMVPXLUF'
-#AWS_SECRET_ACCESS_KEY = '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'
-#AWS_STORAGE_BUCKET_NAME = 'golfapp1dev'
-#AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-#AWS_S3_OBJECT_PARAMETERS = {
-#    'CacheControl': 'max-age=86400',
-#}
-
-#AWS_LOCATION = 'static'
-#STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
-
-#DEFAULT_FILE_STORAGE = 'golfApp1Dev.storage_backends.MediaStorage'  # <-- here is where we reference it
