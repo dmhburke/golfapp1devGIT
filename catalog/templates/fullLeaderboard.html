@@ -1,0 +1,16 @@
+{% extends "baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+
+{% if score_submit > 0 %}
+{% for player in active_players %}
+
+{{ player.name }} {{ player.total|floatformat:"0" }}<br>
+
+{% endfor %}
+{% else %}
+No scores entered
+{% endif %}
+
+{% endblock %}

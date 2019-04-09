@@ -268,7 +268,7 @@ a:link {
 
 .landingpageButton {
   height: 122px;
-  width: 80%;
+  width: 90%;
   border: 1px solid white;
   border-radius: 10px;
   margin: 5% auto;
@@ -323,7 +323,7 @@ a:link {
 /* START SCORESPAGE */
 .scorepageButton {
   height: 80px;
-  width: 275px;
+  width: 295px;
   border: 1px solid white;
   border-radius: 10px;
   margin: 15px auto;

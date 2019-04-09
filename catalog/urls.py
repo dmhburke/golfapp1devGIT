@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.login, name='login'),
     path('landing/', views.landingpage, name='landingpage'),
+    path('leaderboard/',views.fullleaderboard, name='fullleaderboard'),
     path('scoring/', views.scoringpage, name='scoringpage'),
     path('round1/', views.rd1holelist.as_view(), name='rd1holelist'),
     path('round1/<int:pk>', views.rd1holedetail, name='rd1holedetail'),

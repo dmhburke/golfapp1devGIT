@@ -2,14 +2,14 @@ from django import forms
 from catalog.choices import *
 from django.forms.widgets import TextInput
 from django.forms import ModelForm
-from catalog.models import Rd1ScoreModel, PlayerModel, SportsTippingModel
+from catalog.models import Rd1ScoreModel, Rd1SlotModel, PlayerModel, SportsTippingModel
 
 class MyTelephoneInput(TextInput):
         input_type = 'tel'
 
 class Rd1ScoreForm(ModelForm):
     ctp = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select winner', required=False)
-    ld = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select winner', required=False)
+    ctp = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select winner', required=False)
     slot1_score = forms.IntegerField(label='', required=False)
     slot2_score = forms.IntegerField(label='', required=False)
     slot3_score = forms.IntegerField(label='', required=False)

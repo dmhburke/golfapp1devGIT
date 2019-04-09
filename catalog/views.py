@@ -6,7 +6,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 # Add models here
-from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, SportsTippingModel
+from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, SportsTippingModel, EventEntryModel, LeaderBoardModel
 # Add forms here
 from catalog.forms import Rd1ScoreForm, SportsTippingForm
 
@@ -24,6 +24,22 @@ def landingpage (request):
     context = {}
     return render(request, 'landingPage.html', context=context)
 
+def fullleaderboard (request):
+    """Define function for leaderboard view"""
+
+    # Define views here
+    score_submit = EventEntryModel.objects.exclude(winner__isnull=True).count()
+    active_players = PlayerModel.objects.all()
+    
+    context = {
+    'score_submit': score_submit,
+    'active_players': active_players,
+    
+
+        }
+
+    return render(request, 'fullLeaderboard.html', context=context)
+
 def scoringpage (request):
     """View function for login of site."""
     # Define views here    
@@ -38,7 +54,7 @@ class rd1holelist (generic.ListView):
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
+        # Add in additional querysets for context
         ctp_hole = Rd1HoleModel.objects.filter(CTP__gt=0)
         ld_hole = Rd1HoleModel.objects.filter(LD__gt=0)
         tussle_hole = Rd1HoleModel.objects.filter(tussle__isnull=False)

@@ -14,9 +14,90 @@ class PlayerModel(models.Model):
     HC = models.IntegerField(blank=True, null=True)
     image = models.ImageField(upload_to='playerimages', blank=True, null=True)
     jacket = models.CharField(max_length=10,choices=YES_NO,blank=True, null=True)
+    number = models.IntegerField(blank=True, null=True)
+    total = models.DecimalField(max_digits=6, decimal_places=2, default=0, blank=True, null=True)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        ordering = ['-total']
+
+class EventEntryModel(models.Model):
+    number = models.IntegerField(blank=True, null=True)
+    event = models.CharField(max_length=30)
+    points = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    winner = models.ForeignKey('PlayerModel',on_delete = models.CASCADE, blank=True, null=True)
+
+@receiver(post_save, sender=EventEntryModel)
+def leaderboard_update(sender, **kwargs):
+
+    try:
+        player1 = PlayerModel.objects.get(number=1).name
+    except:
+        player1 = None
+    try:
+        player2 = PlayerModel.objects.get(number=2).name
+    except:
+        player2 = None
+    try:
+        player3 = PlayerModel.objects.get(number=3).name
+    except:
+        player3 = None
+    try:
+        player4 = PlayerModel.objects.get(number=4).name
+    except:
+        player4 = None
+    try:
+        player5 = PlayerModel.objects.get(number=5).name
+    except:
+        player5 = None
+    try:
+        player6 = PlayerModel.objects.get(number=6).name
+    except:
+        player6 = None
+    try:
+        player7 = PlayerModel.objects.get(number=7).name
+    except:
+        player7 = None
+    try:
+        player8 = PlayerModel.objects.get(number=8).name
+    except:
+        player8 = None
+    try:
+        player9 = PlayerModel.objects.get(number=9).name
+    except:
+        player9 = None
+    try:
+        player10 = PlayerModel.objects.get(number=10).name
+    except:
+        player10 = None
+    try:
+        player11 = PlayerModel.objects.get(number=11).name
+    except:
+        player11 = None
+    try:
+        player12 = PlayerModel.objects.get(number=12).name
+    except:
+        player12 = None
+
+    if player1 is not None:
+        player1points = list(EventEntryModel.objects.filter(winner__name=player1).aggregate(Sum('points')).values())[0] 
+        player1total, created = PlayerModel.objects.update_or_create(
+            name=player1, defaults ={'total': player1points,})
+
+    if player2 is not None:
+        player2points = list(EventEntryModel.objects.filter(winner__name=player2).aggregate(Sum('points')).values())[0] 
+        player2total, created = PlayerModel.objects.update_or_create(
+            name=player2, defaults ={'total': player2points,})
+
+        
+class LeaderBoardModel(models.Model):
+    player = models.ForeignKey('PlayerModel', on_delete = models.CASCADE, blank=True, null=True)
+    total_points = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+
+    class Meta:
+        ordering = ['total_points']
 
 #ROUND 1
 class Rd1HoleModel(models.Model):
@@ -439,11 +520,11 @@ def my_callback_two(sender, instance, **kwargs):
     try:
         player11_rankscore = player11_stablefordtotal1/player11_holesplayed
     except:
-        player11_rankscore = None
+        player11_rankscore = 0
     try:
         player12_rankscore = player12_stablefordtotal1/player12_holesplayed
     except:
-        player12_rankscore = None
+        player12_rankscore = 0
 
     player1total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=1, defaults ={'player_rankscore': player1_rankscore,},)
