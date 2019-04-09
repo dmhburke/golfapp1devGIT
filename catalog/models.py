@@ -399,43 +399,43 @@ def my_callback_two(sender, instance, **kwargs):
     try:
         player1_rankscore = player1_stablefordtotal1/player1_holesplayed
     except:
-        player1_rankscore = None
+        player1_rankscore = 0
     try:
         player2_rankscore = player2_stablefordtotal1/player2_holesplayed
     except:
-        player2_rankscore = None
+        player2_rankscore = 0
     try:
         player3_rankscore = player3_stablefordtotal1/player3_holesplayed
     except:
-        player3_rankscore = None
+        player3_rankscore = 0
     try:
         player4_rankscore = player4_stablefordtotal1/player4_holesplayed
     except:
-        player4_rankscore = None
+        player4_rankscore = 0
     try:
         player5_rankscore = player5_stablefordtotal1/player5_holesplayed
     except:
-        player5_rankscore = None
+        player5_rankscore = 0
     try:
         player6_rankscore = player6_stablefordtotal1/player6_holesplayed
     except:
-        player6_rankscore = None
+        player6_rankscore = 0
     try:
         player7_rankscore = player7_stablefordtotal1/player7_holesplayed
     except:
-        player7_rankscore = None
+        player7_rankscore = 0
     try:
         player8_rankscore = player1_stablefordtotal1/player8_holesplayed
     except:
-        player8_rankscore = None
+        player8_rankscore = 0
     try:
         player9_rankscore = player9_stablefordtotal1/player9_holesplayed
     except:
-        player9_rankscore = None
+        player9_rankscore = 0
     try:
         player10_rankscore = player10_stablefordtotal1/player10_holesplayed
     except:
-        player10_rankscore = None
+        player10_rankscore = 0
     try:
         player11_rankscore = player11_stablefordtotal1/player11_holesplayed
     except:
