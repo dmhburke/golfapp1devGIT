@@ -16,8 +16,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% load static from staticfiles %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css"> <!--ORIGINAL {% static 'css/styles.css' %}-->
 <link rel="icon"
     type="image/png"
     href="{% static 'styles.css' %}">

@@ -29,14 +29,14 @@ class Rd1ScoreForm(ModelForm):
         self.fields['slot2_score'].widget=MyTelephoneInput(attrs={'id': 'player2', 'class':'scoreInputField'})
         self.fields['slot3_score'].widget=MyTelephoneInput(attrs={'id': 'player3', 'class':'scoreInputField'})
         self.fields['slot4_score'].widget=MyTelephoneInput(attrs={'id': 'player4', 'class':'scoreInputField'})       
-        self.fields['slot5_score'].widget.attrs={'type': 'tel', 'id': 'player5', 'class':'scoreInputField'}
-        self.fields['slot6_score'].widget.attrs={'type': 'tel', 'id': 'player6', 'class':'scoreInputField'}
-        self.fields['slot7_score'].widget.attrs={'type': 'tel', 'id': 'player7', 'class':'scoreInputField'}
-        self.fields['slot8_score'].widget.attrs={'type': 'tel', 'id': 'player8', 'class':'scoreInputField'}
-        self.fields['slot9_score'].widget.attrs={'type': 'tel', 'id': 'player9', 'class':'scoreInputField'}
-        self.fields['slot10_score'].widget.attrs={'type': 'tel', 'id': 'player10', 'class':'scoreInputField'}
-        self.fields['slot11_score'].widget.attrs={'type': 'tel', 'id': 'player11', 'class':'scoreInputField'}
-        self.fields['slot12_score'].widget.attrs={'type': 'tel', 'id': 'player12', 'class':'scoreInputField'}
+        self.fields['slot5_score'].widget=MyTelephoneInput(attrs={'id': 'player5', 'class':'scoreInputField'})
+        self.fields['slot6_score'].widget=MyTelephoneInput(attrs={'id': 'player6', 'class':'scoreInputField'})
+        self.fields['slot7_score'].widget=MyTelephoneInput(attrs={'id': 'player7', 'class':'scoreInputField'})
+        self.fields['slot8_score'].widget=MyTelephoneInput(attrs={'id': 'player8', 'class':'scoreInputField'})
+        self.fields['slot9_score'].widget=MyTelephoneInput(attrs={'id': 'player9', 'class':'scoreInputField'})
+        self.fields['slot10_score'].widget=MyTelephoneInput(attrs={'id': 'player10', 'class':'scoreInputField'})
+        self.fields['slot11_score'].widget=MyTelephoneInput(attrs={'id': 'player11', 'class':'scoreInputField'})
+        self.fields['slot12_score'].widget=MyTelephoneInput(attrs={'id': 'player12', 'class':'scoreInputField'})
 
 
     class Meta:
