@@ -6,6 +6,10 @@
   margin: 0px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -319,6 +323,124 @@ a:link {
 
 
 /* END LANDINGPAGE */
+
+/* START FULLLEADERBOARD */
+
+#fullLeaderboardHeader {
+  background-color: white;
+  height: 65px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 3px solid #F8C145;
+  width: 99%;
+  margin: 0 auto;
+  margin-bottom: 3px;
+  box-shadow: 1px 1px 5px 2px lightgrey;
+
+}
+
+#fullLeaderboardTopText {
+    height: 30px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 45px;
+}
+
+#fullLeaderboardBottomText {
+  height: 25px;
+  text-align: center;
+}
+
+#fullLeaderboardBody {
+  width: 99%;
+  margin: 0 auto;
+  overflow: scroll;
+  min-height: 370px;
+  background-color: white;
+
+}
+
+#fullLeaderboardRow {
+  width: 99%;
+  height: 68px;
+  margin: -2px auto;
+  padding: 5px 3px;
+}
+
+#fullLeaderboardPosition {
+  display: inline-block;
+  vertical-align: middle;
+  width: 13%;
+  height: 100%;
+  text-align: center;
+  line-height: 55px;
+  box-shadow: 1px 1px 4px 1px lightgrey;
+  border: 1px solid white;
+}
+
+#fullLeaderboardPlayer {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 85%;
+  box-shadow: 1px 1px 4px 1px lightgrey;
+}
+
+#fullLeaderboardImage {
+  display: inline-block;
+  vertical-align: middle;
+  height: 50px;
+  width: 48px;
+  border-radius: 100%;
+  background-color: #f2f2f2;
+  margin-left: 10px;
+}
+
+#fullLeaderboardName {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 52%;
+  margin-left: 3px;
+  line-height: 57px;
+  margin-left: 5px;
+}
+
+#fullLeaderboardScore {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 23%;
+  line-height: 55px;
+  text-align: center;
+  border: 1px solid white;
+  float: right;
+}
+
+#leaderboardBuffer {
+  width: 100%;
+  height: 2px;
+  border-bottom: 3px solid #F8C145;
+  margin: 0 auto;
+}
+
+#fullLeaderboardScrollContainer {
+  height: 365px;
+  width: 100%;
+  overflow: scroll;
+  margin: 0;
+  border-bottom: 3px solid #F8C145;
+}
+
+#noscorePlaceholder {
+  color: lightgrey;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+
+/* END FULLLEADERBOARD */
 
 /* START SCORESPAGE */
 .scorepageButton {

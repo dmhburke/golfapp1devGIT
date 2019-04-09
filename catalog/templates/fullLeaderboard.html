@@ -2,15 +2,34 @@
 
 {% block content %}
 {% load static %}
+<div id="fullLeaderboardHeader">
+  <div class="yellowText indyText" id="fullLeaderboardTopText">The leaderboard</div>
+  <div class="blueText indyText" id="fullLeaderboardBottomText">Indy1200</div>
+</div>
+
+<div id="fullLeaderboardScrollContainer">
+<div id="fullLeaderboardBody">
 
 {% if score_submit > 0 %}
 {% for player in active_players %}
 
-{{ player.name }} {{ player.total|floatformat:"0" }}<br>
+<div  id="fullLeaderboardRow">
+  <div class="yellowBackground indyText blueText" id="fullLeaderboardPosition">{{ forloop.counter }}</div>
+  <div id="fullLeaderboardPlayer">
+    <img id="fullLeaderboardImage" src="{{ player.image.url }}">
+    <div class="indyText blueText" id="fullLeaderboardName">{{ player.name }}</div>
+    <div class="indyText yellowText blueBackground" id="fullLeaderboardScore">{{ player.total|floatformat:"0" }}</div>
+  </div></div>
+  {% if forloop.counter|divisibleby:12 %}
+  <div></div>
+  {% elif forloop.counter|divisibleby:3 %}
+  <div id="leaderboardBuffer"></div>
+  {% endif %}
 
 {% endfor %}
-{% else %}
-No scores entered
-{% endif %}
 
+{% else %}
+<div id= "noscorePlaceholder">No scores entered yet</div>
+{% endif %}
+</div></div>
 {% endblock %}
