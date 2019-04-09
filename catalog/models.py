@@ -425,7 +425,7 @@ def my_callback_two(sender, instance, **kwargs):
     except:
         player7_rankscore = 0
     try:
-        player8_rankscore = player1_stablefordtotal1/player8_holesplayed
+        player8_rankscore = player8_stablefordtotal1/player8_holesplayed
     except:
         player8_rankscore = 0
     try:
