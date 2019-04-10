@@ -6,10 +6,6 @@
   margin: 0px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 a:link {
   text-decoration: none;
 }
