@@ -219,7 +219,7 @@ def entertips(request):
         'form': form,
         }
 
-    return render(request, 'enterTips.html', context=context)
+    return render(request, 'enterSportsTips.html', context=context)
 
 def entersocial(request):
     """Create view for social entry view"""
