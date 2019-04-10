@@ -9,7 +9,7 @@ class MyTelephoneInput(TextInput):
 
 class Rd1ScoreForm(ModelForm):
     ctp = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select winner', required=False)
-    ctp = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select winner', required=False)
+    ld = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select winner', required=False)
     slot1_score = forms.IntegerField(label='', required=False)
     slot2_score = forms.IntegerField(label='', required=False)
     slot3_score = forms.IntegerField(label='', required=False)
