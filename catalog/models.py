@@ -99,7 +99,96 @@ def leaderboard_update(sender, **kwargs):
         player1total, created = PlayerModel.objects.update_or_create(
             name=player2, defaults ={'total': player2pointsAdj,})
 
-        
+    if player3 is not None:
+        player3points = list(EventEntryModel.objects.filter(winner__name=player3).aggregate(Sum('points')).values())[0]
+        if player3points is None:
+            player3pointsAdj = 0
+        else:
+            player3pointsAdj = player3points
+        player3total, created = PlayerModel.objects.update_or_create(
+            name=player3, defaults ={'total': player3pointsAdj,})
+
+    if player4 is not None:
+        player4points = list(EventEntryModel.objects.filter(winner__name=player4).aggregate(Sum('points')).values())[0]
+        if player4points is None:
+            player4pointsAdj = 0
+        else:
+            player4pointsAdj = player4points
+        player4total, created = PlayerModel.objects.update_or_create(
+            name=player4, defaults ={'total': player4pointsAdj,})
+
+    if player5 is not None:
+        player5points = list(EventEntryModel.objects.filter(winner__name=player5).aggregate(Sum('points')).values())[0]
+        if player5points is None:
+            player5pointsAdj = 0
+        else:
+            player5pointsAdj = player5points
+        player5total, created = PlayerModel.objects.update_or_create(
+            name=player5, defaults ={'total': player5pointsAdj,})
+
+    if player6 is not None:
+        player6points = list(EventEntryModel.objects.filter(winner__name=player6).aggregate(Sum('points')).values())[0]
+        if player6points is None:
+            player6pointsAdj = 0
+        else:
+            player6pointsAdj = player6points
+        player6total, created = PlayerModel.objects.update_or_create(
+            name=player6, defaults ={'total': player6pointsAdj,})
+
+    if player7 is not None:
+        player7points = list(EventEntryModel.objects.filter(winner__name=player7).aggregate(Sum('points')).values())[0]
+        if player7points is None:
+            player7pointsAdj = 0
+        else:
+            player7pointsAdj = player7points
+        player7total, created = PlayerModel.objects.update_or_create(
+            name=player7, defaults ={'total': player7pointsAdj,})
+
+    if player8 is not None:
+        player8points = list(EventEntryModel.objects.filter(winner__name=player8).aggregate(Sum('points')).values())[0]
+        if player8points is None:
+            player8pointsAdj = 0
+        else:
+            player8pointsAdj = player8points
+        player8total, created = PlayerModel.objects.update_or_create(
+            name=player8, defaults ={'total': player8pointsAdj,})
+
+    if player9 is not None:
+        player9points = list(EventEntryModel.objects.filter(winner__name=player9).aggregate(Sum('points')).values())[0]
+        if player9points is None:
+            player9pointsAdj = 0
+        else:
+            player9pointsAdj = player9points
+        player9total, created = PlayerModel.objects.update_or_create(
+            name=player9, defaults ={'total': player9pointsAdj,})
+
+    if player10 is not None:
+        player10points = list(EventEntryModel.objects.filter(winner__name=player10).aggregate(Sum('points')).values())[0]
+        if player10points is None:
+            player10pointsAdj = 0
+        else:
+            player10pointsAdj = player10points
+        player10total, created = PlayerModel.objects.update_or_create(
+            name=player10, defaults ={'total': player10pointsAdj,})
+
+    if player11 is not None:
+        player11points = list(EventEntryModel.objects.filter(winner__name=player11).aggregate(Sum('points')).values())[0]
+        if player11points is None:
+            player11pointsAdj = 0
+        else:
+            player11pointsAdj = player11points
+        player11total, created = PlayerModel.objects.update_or_create(
+            name=player11, defaults ={'total': player11pointsAdj,})
+
+    if player12 is not None:
+        player12points = list(EventEntryModel.objects.filter(winner__name=player12).aggregate(Sum('points')).values())[0]
+        if player12points is None:
+            player12pointsAdj = 0
+        else:
+            player12pointsAdj = player12points
+        player12total, created = PlayerModel.objects.update_or_create(
+            name=player12, defaults ={'total': player12pointsAdj,})
+
 class LeaderBoardModel(models.Model):
     player = models.ForeignKey('PlayerModel', on_delete = models.CASCADE, blank=True, null=True)
     total_points = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
