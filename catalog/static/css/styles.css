@@ -48,6 +48,10 @@ a:link {
   text-transform: uppercase;
 }
 
+.greyBackground {
+  background-color: #F2F2F2;
+}
+
 /*reference only*/
 .indyGradient {
   background-image: linear-gradient(170deg,
@@ -987,25 +991,559 @@ input[type=number]::-webkit-outer-spin-button {
 /* END LEADERBOARD */
 
 /* START ENTERTIPS */
-#authUserName {
-  height: 50px;
-  width: 50%;
-  background-color: lightgrey;
-  margin: 10px auto;
-}
-
-#authPassword {
-  height: 50px;
-  width: 50%;
-  background-color: lightgrey;
-  margin: 10px auto;
-
+#tipsScrollContainer {
+  height: 460px;
+  width: 100%;
+  overflow: scroll;
+  margin: 0;
 }
 
 
+#tipFormContainer {
+  min-height: 430px;
+  width: 95%;
+  margin: 0 auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-bottom: 2px;
+}
 
+#tipFormHeader {
+  height: 75px;
+  width: 100%;
+  border-bottom: 3px solid #051864;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#tipFormIndyText {
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 2rem;
+}
+
+#tipFormDescText {
+  text-align: center;
+}
+
+#tipFormAuthContainer {
+  height: 70px;
+  width: 90%;
+  box-shadow: 1px 1px 4px 2px #F2F2F2;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+#authTopRow {
+  height: 20%;
+  width: 67%;
+  line-height: 10px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #051864;
+}
+
+#rightNameInstructions {
+  display: inline-block;
+  vertical-align: middle;
+  height: 70%;
+  width: 49%;
+
+  margin-top: 4px;
+}
+
+#tippingUsername {
+  height: 50%;
+  line-height: 24px;
+  padding-left: 4px;
+}
+
+#tippingPassword {
+  height: 50%;
+  line-height: 24px;
+  padding-left: 4px;
+}
+
+#leftNameInput {
+  display: inline-block;
+  vertical-align: middle;
+  height: 70%;
+  width: 49%;
+
+  margin-top: 4px;
+}
+
+#id_name {
+  BORDER: 0;
+  height: 20px;
+  background-color: #F2F2F2;
+  width: 100%;
+  text-align-last: center;
+  font-family: 'Racing Sans One', verdana;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #F8C145;
+}
+
+#id_password {
+  BORDER: 0;
+  height: 20px;
+  background-color: #F2F2F2;
+  width: 100%;
+  color: #F8C145;
+  text-align: center;
+}
+
+#tippingUsernameInput {
+  height: 50%;
+  line-height: 24px;
+}
+
+#tippingPasswordInput {
+  height: 50%;
+  line-height: 24px;
+}
+
+
+#tipFormContentContainer {
+  height: 140px;
+  width: 90%;
+  box-shadow: 1px 1px 4px 2px #F2F2F2;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+#toprow {
+  height: 10%;
+  width: 67%;
+
+  border: 1px solid white;
+  line-height: 10px;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #051864;
+}
+
+#corerow {
+  height: 73%;
+  width: 100%;
+  background-color: lightgrey;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+}
+
+#leftpanel {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 40%;
+  background-color: white;
+
+}
+
+.teamImgContainer {
+  height: 75px;
+  width: 75px;
+  background-color: lightgrey;
+  margin: 3px auto;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 1px grey;
+  border: 1px solid white;
+}
+
+#teamTextContainer {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 11px;
+}
+
+#midpanel {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 20%;
+  background-color: white;
+
+
+}
+
+#sportsIcon {
+  height: 40%;
+  width: 100%;
+
+
+}
+
+#vsContainer {
+  height: 25%;
+  width: 100%;
+
+
+  text-align: center;
+  line-height: 24px;
+}
+
+#dateContainer {
+  height: 30%;
+  width: 100%;
+
+  color: grey;
+  text-align: center;
+  line-height: 26px;
+  font-size: 0.8rem;
+}
+
+#rightpanel {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 40%;
+  background-color: white;
+}
+
+#submitrow {
+  height: 16%;
+  width: 99%;
+  margin: 0 auto;
+  padding-left: 85px;
+  padding-top:2px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+#tipFormSubmitContainer {
+  height: 75px;
+  width: 90%;
+  box-shadow: 1px 1px 4px 2px #F2F2F2;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 3px;
+
+}
+
+#tipsSubmitButton {
+  display: block;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  border: 3px solid white;
+  margin: 0px auto;
+  margin-top: 12px;
+}
+
+#id_game1, #id_game2, #id_game3, #id_game4, #id_game5, #id_game6, #id_game7, #id_game8, #id_game9, #id_game10 {
+  border: 0;
+  -webkit-appearance: none;
+  background: none;
+  text-align-last: center;
+  font-family: 'Racing Sans One', verdana;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #051864;
+  width: 100px;
+  margin: 0 auto;
+  }
+
+#giantsIMG {
+  background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+
+}
+
+#piratesIMG {
+  background-image: url(https://media.giphy.com/media/KLdVImkHSIUqQ/giphy.gif);
+  background-position: 60% 50%;
+  background-size: 130px;
+  background-repeat: no-repeat;
+
+}
+
+#leafsIMG {
+  background-image: url(https://media1.tenor.com/images/6273dbc2ab501c2972506a5116119184/tenor.gif?itemid=8220469);
+  background-position: 50% 50%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
+
+#bruinsIMG {
+  background-image: url(https://media2.giphy.com/media/l3q2OIuG3l6EwkWIg/giphy.gif);
+  background-position: 60% 50%;
+  background-size: 130px;
+  background-repeat: no-repeat;
+
+}
+
+#royalsIMG {
+  background-image: url(https://j.gifs.com/mw8q3n.gif);
+  background-position: 50% 50%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
+
+#indiansIMG {
+  background-image: url(https://media.giphy.com/media/3o7btS2GSID9H2UNiw/giphy.gif);
+  background-position: 60% 70%;
+  background-size: 100px;
+  background-repeat: no-repeat;
+
+}
+
+#mancityIMG {
+  background-image: url(http://farm8.staticflickr.com/7424/9876298374_4f91713571_o.gif);
+  background-position: 80% 50%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
+
+#tottenhamIMG {
+  background-image: url(https://media2.giphy.com/media/eWuOGwO8TEtAA/giphy.gif);
+  background-position: 40% 70%;
+  background-size: 130px;
+  background-repeat: no-repeat;
+
+}
+
+
+#westhamIMG {
+  background-image: url(https://media.giphy.com/media/uJmBIFqzU6sHS/giphy.gif);
+  background-position: 70% 50%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
+
+#leicesterIMG {
+  background-image: url(https://media1.tenor.com/images/c1c2f76be8dcc274fa6f4540856c0eed/tenor.gif?itemid=5508138);
+  background-position: 40% 70%;
+  background-size: 140px;
+  background-repeat: no-repeat;
+}
+
+#yankeesIMG {
+  background-image: url(https://media.giphy.com/media/ARDPbQ5wTaIF2/giphy.gif);
+  background-position: 55% 45%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
+
+#kansasIMG {
+  background-image: url(https://media2.giphy.com/media/zfZmbEgi5b7BS/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 140px;
+  background-repeat: no-repeat;
+
+}
+
+#islandersIMG {
+  background-image: url(https://media.giphy.com/media/xTiN0NaLs6XmLQyjXq/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
+
+#penguinsIMG {
+  background-image: url(https://media.giphy.com/media/26FmQGxZTETMR4BPy/giphy.gif);
+  background-position: 70% 0%;
+  background-size: 160px;
+  background-repeat: no-repeat;
+
+}
 
 /* END ENTERTIPS */
+
+
+
+/* START SOCIAL */
+#socialScrollContainer {
+  height: 460px;
+  width: 100%;
+  overflow: scroll;
+  margin: 0;
+}
+
+#socialFormContainer {
+  height: 220px;
+  width: 90%;
+  margin: 5px auto;
+  margin-bottom: 20px;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#socialFormHeader {
+  height: 25%;
+  width: 100%;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#socialTopText {
+  height: 30px;
+  width: 100%;
+  line-height: 40px;
+  font-size: 1.5rem;
+}
+
+#socialBottomText {
+  height: 20px;
+  width: 100%;
+}
+
+#socialFormBody {
+  height: 135px;
+  width: 100%;
+  background-color: white;
+}
+
+#socialAuthContainer {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+  padding: 4px 0px;
+}
+
+#socialInstructions, #socialInput {
+  height: 100%;
+  width: 55%;
+  padding: 0px 7px;
+}
+
+#yourNameInstructions, #yourPwdInstructions {
+  height: 50%;
+  width: 100%;
+  text-align: left;
+  line-height: 25px;
+  font-size: 1.15rem;
+}
+
+#id_friday-name, #id_friday-password {
+  background-color: #F2F2F2;
+  height: 27px;
+  width: 100%;
+  text-align: left;
+  margin: 1px 0px;
+  -webkit-appearance: none;
+  border: 0;
+  text-align: center;
+  padding-left: 5px;
+  color: #051864;
+  font-weight: BOLD;
+}
+
+#bestInstructions, #honorableInstructions {
+  height: 50%;
+  width: 100%;
+  text-align: left;
+  line-height: 29px;
+  font-size: 1.15rem;
+  margin: 1px 0px;
+}
+
+#id_friday-best, #id_friday-honorable {
+  height: 28px;
+  width: 100%;
+  text-align: left;
+  margin: 1px 0px;
+  -webkit-appearance: none;
+  border: 0;
+  text-align: center;
+  padding-left: 5px;
+  color: blue;
+  font-weight: bold;
+
+}
+
+#id_friday-best {
+  background-color: #F8C145;
+  color: #051864;
+}
+
+#id_friday-honorable {
+  background-color: #F2F2F2;
+  color: #051864;
+}
+
+#id_saturday-name, #id_saturday-password {
+  background-color: #F2F2F2;
+  height: 27px;
+  width: 100%;
+  text-align: left;
+  margin: 1px 0px;
+  -webkit-appearance: none;
+  border: 0;
+  text-align: center;
+  padding-left: 5px;
+  color: #051864;
+  font-weight: BOLD;
+}
+
+#bestInstructions, #honorableInstructions {
+  height: 50%;
+  width: 100%;
+  text-align: left;
+  line-height: 29px;
+  font-size: 1.15rem;
+  margin: 1px 0px;
+}
+
+#id_saturday-best, #id_saturday-honorable {
+  height: 28px;
+  width: 100%;
+  text-align: left;
+  margin: 1px 0px;
+  -webkit-appearance: none;
+  border: 0;
+  text-align: center;
+  padding-left: 5px;
+  color: blue;
+  font-weight: bold;
+
+}
+
+#id_saturday-best {
+  background-color: #F8C145;
+  color: #051864;
+}
+
+#id_saturday-honorable {
+  background-color: #F2F2F2;
+  color: #051864;
+}
+
+#socialFormSubmit {
+  height: 35px;
+  width: 100%;
+}
+
+#socialSubmitButton {
+  height: 30px;
+  width: 100px;
+  border-radius: 20px;
+  border: 2px solid white;
+  margin-top: 2px;
+}
+
+#socialSubmitIcon {
+  height: 30px;
+  width: 30px;
+  margin-top: -2px;
+}
+
+/* END SOCIAL */
 
 /*
 @media only screen and (min-width: 1200px) {

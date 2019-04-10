@@ -1,0 +1,108 @@
+{% extends "baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+
+<!--FRIDAY FORM - fridayform -->
+<div id="socialScrollContainer">
+
+<div class="bigShadow" id="socialFormContainer">
+  <form method = "POST">
+      {% csrf_token %}
+<div class="blueBackground indyText" id="socialFormHeader">
+  <div id="socialTopText" class="indyText yellowText">Friday night</div>
+  <div id="socialBottomText">best on ground</div>
+</div>
+
+<div id="socialFormBody">
+
+  <div id="socialAuthContainer">
+
+    <div id="socialInstructions">
+      <div class="indyText blueText" id="yourNameInstructions">Your name</div>
+      <div class="indyText blueText" id="yourPwdInstructions">Your password</div>
+    </div>
+
+    <div id="socialInput">
+      <div class="">{{ fridayform.name }}</div>
+      <div class="">{{ fridayform.password }}</div>
+    </div>
+
+  </div>
+
+  <div id="socialAuthContainer">
+    <div id="socialInstructions">
+      <div class="indyText yellowBackground blueText" id="bestInstructions">Best on ground</div>
+      <div class="indyText greyBackground blueText" id="honorableInstructions">Honorable mention</div>
+    </div>
+      <div id="socialInput">
+        <div class="">{{ fridayform.best }}</div>
+        <div class="">{{ fridayform.honorable }}</div>
+      </div>
+  </div>
+</div>
+
+<div class="blueBackground" id="socialFormSubmit">
+  <button id="socialSubmitButton" name="friday" class="yellowBackground" type="submit">
+      <img id="socialSubmitIcon" src="{% static 'icons/scoreSubmitBlue.svg' %}">
+    </button>
+  </form>
+</div>
+
+</div>
+
+<!--SATURDAY FORM - saturdayform -->
+<div class="bigShadow" id="socialFormContainer">
+  <form method = "POST">
+      {% csrf_token %}
+<div class="yellowBackground indyText" id="socialFormHeader">
+  <div id="socialTopText" class="indyText blueText">Saturday night</div>
+  <div id="socialBottomText">best on ground</div>
+</div>
+
+<div id="socialFormBody">
+
+  <div id="socialAuthContainer">
+
+    <div id="socialInstructions">
+      <div class="indyText blueText" id="yourNameInstructions">Your name</div>
+      <div class="indyText blueText" id="yourPwdInstructions">Your password</div>
+    </div>
+
+    <div id="socialInput">
+      <div class="">{{ saturdayform.name }}</div>
+      <div class="">{{ saturdayform.password }}</div>
+    </div>
+
+  </div>
+
+
+  <div id="socialAuthContainer">
+
+    <div id="socialInstructions">
+      <div class="indyText yellowBackground blueText" id="bestInstructions">Best on ground</div>
+      <div class="indyText greyBackground blueText" id="honorableInstructions">Honorable mention</div>
+    </div>
+
+      <div id="socialInput">
+        <div class="">{{ saturdayform.best }}</div>
+        <div class="">{{ saturdayform.honorable }}</div>
+      </div>
+  </div>
+</div>
+
+
+<div class="yellowBackground" id="socialFormSubmit">
+  <button id="socialSubmitButton" name="saturday" class="whiteBackground" type="submit">
+      <img id="socialSubmitIcon" src="{% static 'icons/scoreSubmitBlue.svg' %}">
+    </button>
+  </form>
+
+</div>
+
+</div>
+
+</div>
+
+
+{% endblock %}

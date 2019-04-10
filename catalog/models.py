@@ -263,8 +263,6 @@ class Rd1StablefordModel(models.Model):
     slot11_stbl = models.IntegerField(blank=True, null=True)
     slot12_stbl = models.IntegerField(blank=True, null=True)
 
-
-
 @receiver(pre_save, sender=Rd1ScoreModel)
 def my_callback(sender, instance, **kwargs):
 
@@ -658,4 +656,27 @@ class Rd1CTPModel(models.Model):
 
 class SportsTippingModel(models.Model):
     name = models.ForeignKey('PlayerModel',on_delete = models.CASCADE)
-    tip1 = models.CharField(max_length=10,choices=YES_NO,blank=True, null=True)
+    password = models.CharField(max_length=30, blank=True, null=True)
+    game1 = models.CharField(max_length=10,choices=GAME_1,blank=True, null=True)
+    game2 = models.CharField(max_length=10,choices=GAME_2,blank=True, null=True)
+    game3 = models.CharField(max_length=10,choices=GAME_3,blank=True, null=True)
+    game4 = models.CharField(max_length=10,choices=GAME_4,blank=True, null=True)
+    game5 = models.CharField(max_length=10,choices=GAME_5,blank=True, null=True)
+    game6 = models.CharField(max_length=10,choices=GAME_6,blank=True, null=True)
+    game7 = models.CharField(max_length=10,choices=GAME_7,blank=True, null=True)
+    game8 = models.CharField(max_length=10,choices=GAME_8,blank=True, null=True)
+    game9 = models.CharField(max_length=10,choices=GAME_9,blank=True, null=True)
+    game10 = models.CharField(max_length=10,choices=GAME_10,blank=True, null=True)
+    time = models.DateTimeField(auto_now_add=True)
+
+class FridaySocialModel(models.Model):
+    name = models.ForeignKey('PlayerModel',on_delete = models.CASCADE)
+    password = models.CharField(max_length=30, blank=True, null=True)
+    best = models.ForeignKey('PlayerModel',related_name='fri_best', on_delete = models.CASCADE)
+    honorable = models.ForeignKey('PlayerModel',related_name='fri_honorable',on_delete = models.CASCADE)
+
+class SaturdaySocialModel(models.Model):
+    name = models.ForeignKey('PlayerModel',on_delete = models.CASCADE)
+    password = models.CharField(max_length=30, blank=True, null=True)
+    best = models.ForeignKey('PlayerModel',related_name='sat_best', on_delete = models.CASCADE)
+    honorable = models.ForeignKey('PlayerModel',related_name='sat_honorable',on_delete = models.CASCADE)

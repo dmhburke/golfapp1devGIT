@@ -2,7 +2,7 @@ from django import forms
 from catalog.choices import *
 from django.forms.widgets import TextInput
 from django.forms import ModelForm
-from catalog.models import Rd1ScoreModel, Rd1SlotModel, PlayerModel, SportsTippingModel
+from catalog.models import Rd1ScoreModel, Rd1SlotModel, PlayerModel, SportsTippingModel, FridaySocialModel, SaturdaySocialModel
 
 class MyTelephoneInput(TextInput):
         input_type = 'tel'
@@ -45,9 +45,45 @@ class Rd1ScoreForm(ModelForm):
 
 
 class SportsTippingForm(ModelForm):
-    name = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Select name', required=True)
-    tip1 = forms.ChoiceField(choices=YES_NO)
+        name = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Player name', required=True)
+        password = forms.CharField(widget=forms.PasswordInput, label='')
+        game1 = forms.ChoiceField(choices=GAME_1, required=False)
+        game2 = forms.ChoiceField(choices=GAME_2, required=False)
+        game3 = forms.ChoiceField(choices=GAME_3, required=False)
+        game4 = forms.ChoiceField(choices=GAME_4, required=False)
+        game5 = forms.ChoiceField(choices=GAME_5, required=False)
+        game6 = forms.ChoiceField(choices=GAME_6, required=False)
+        game7 = forms.ChoiceField(choices=GAME_7, required=False)
+        game8 = forms.ChoiceField(choices=GAME_8, required=False)
+        game9 = forms.ChoiceField(choices=GAME_9, required=False)
+        game10 = forms.ChoiceField(choices=GAME_10, required=False)
     
-    class Meta:
-        model = SportsTippingModel
-        fields = ('name', 'tip1',)
+        class Meta:
+                model = SportsTippingModel
+                fields = ('name', 'password', 'game1', 'game2',)
+
+# 'game3', 'game4', 'game5', 'game6', 'game7', 'game8', 'game9', 'game10'
+
+class FridaySocialForm(ModelForm):
+        name = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Your name', required=True)
+        password = forms.CharField(widget=forms.PasswordInput, label='')        
+        best = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Best on ground', required=True)
+        honorable = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Honorable mention', required=False)
+#        prefix = 'friday'
+
+        class Meta:
+                model=FridaySocialModel
+                fields = ('name', 'password', 'best', 'honorable',)
+
+class SaturdaySocialForm(ModelForm):
+        name = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Your name', required=True)
+        password = forms.CharField(widget=forms.PasswordInput, label='')        
+        best = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Best on ground', required=True)
+        honorable = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Honorable mention', required=False)
+#        prefix = 'saturday'
+
+        class Meta:
+                model=SaturdaySocialModel
+                fields = ('name', 'password', 'best', 'honorable',)
+
+        

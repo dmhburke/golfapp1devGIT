@@ -6,9 +6,9 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 # Add models here
-from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, SportsTippingModel, EventEntryModel, LeaderBoardModel
+from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,FridaySocialModel 
 # Add forms here
-from catalog.forms import Rd1ScoreForm, SportsTippingForm
+from catalog.forms import Rd1ScoreForm, SportsTippingForm, FridaySocialForm, SaturdaySocialForm
 
 #from catalog.signals import *
 
@@ -26,7 +26,6 @@ def landingpage (request):
 
 def fullleaderboard (request):
     """Define function for leaderboard view"""
-
     # Define views here
     score_submit = EventEntryModel.objects.exclude(winner__isnull=True).count()
     active_players = PlayerModel.objects.all()
@@ -34,9 +33,7 @@ def fullleaderboard (request):
     context = {
     'score_submit': score_submit,
     'active_players': active_players,
-    
-
-        }
+    }
 
     return render(request, 'fullLeaderboard.html', context=context)
 
@@ -209,7 +206,7 @@ def entertips(request):
 
     #Add views
     if request.method == 'POST':        
-        form = SportsTippingForm(request.POST, instance = model)
+        form = SportsTippingForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
@@ -222,4 +219,35 @@ def entertips(request):
         'form': form,
         }
 
-    return render(request, 'entertips.html', context=context)
+    return render(request, 'enterTips.html', context=context)
+
+def entersocial(request):
+    """Create view for social entry view"""
+
+    if request.method == 'POST':
+        if 'friday' in request.POST:
+            fridayform = FridaySocialForm(request.POST, prefix='friday')
+            if fridayform.is_valid():
+                post = fridayform.save(commit=False)
+                post.save()
+                return redirect('landingpage')
+                saturdayform = SaturdaySocialForm(prefix='saturday')
+
+        elif 'saturday' in request.POST:
+            saturdayform = SaturdaySocialForm(request.POST, prefix='saturday')
+            if saturdayform.is_valid():
+                post = saturdayform.save(commit=False)
+                post.save()
+                return redirect('landingpage')
+                fridayform = FridaySocialForm(prefix='friday')
+    else:
+        fridayform = FridaySocialForm(prefix='friday')
+        saturdayform = SaturdaySocialForm(prefix='saturday')
+    
+    context = {
+#        'fridayform': fridayform,
+        'saturdayform': saturdayform,
+        'fridayform': fridayform,
+        }
+    
+    return render(request, 'enterSocial.html', context=context)

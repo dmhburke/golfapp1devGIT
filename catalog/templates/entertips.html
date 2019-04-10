@@ -1,26 +1,258 @@
 {% extends "baseGolfApp.html" %}
 
 {% block content %}
-{% load static %}
 
 {% load static %}
+<div id="tipsScrollContainer">
+<div id="tipFormContainer" class= "bigShadow">
+  <div id="tipFormHeader" class="yellowBackground">
+    <div id="tipFormIndyText" class="indyText blueText">Indy1200</div>
+    <div id="tipFormDescText" class="bold whiteText">Sports tipping</div>
+  </div>
 
-<form method = "POST">
-    {% csrf_token %}
+  <form method = "POST">
+      {% csrf_token %}
 
-<div id="authUserName">
-{{ form.name }}
-</div>
+<!-- Details -->
+  <div id="tipFormAuthContainer">
+    <div id="authTopRow">Enter your details</div>
+    <div id="rightNameInstructions">
+      <div class="indyText blueText" id="tippingUsername">Your name</div>
+      <div class="indyText blueText" id="tippingPassword">Your password</div>
+    </div>
+    <div id="leftNameInput">
+      <div class="indyText blueText" id="tippingUsernameInput">{{ form.name }}</div>
+      <div class="indyText blueText" id="tippingPasswordInput">{{ form.password }}</div>
+    </div>
+    </div>
 
-<div id="authPassword">
-{{ form.tip1 }}
-</div>
 
-<button id="scoreSubmitButton" class="yellowBackground" type="submit">
+
+  <!--Game 1 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 1</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="XXXX"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Player 1 Name</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsGolfBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/19</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Player 2 Name</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game1 }} </div>
+  </div>
+
+  <!--Game 2 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 2</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="giantsIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Giants</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsBaseballBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/19</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="piratesIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Pirates</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game2 }} </div>
+  </div>
+
+  <!--Game 3 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 3</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="XXXX"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Team 1</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsBasketballBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/19</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Team 2</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game3 }} </div>
+  </div>
+
+  <!--Game 4 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 4</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="XXXX"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Team 1</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsBasketballBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/19</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Team 2</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game4 }} </div>
+  </div>
+
+  <!--Game 5 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 5</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="leafsIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Maple Leafs</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsIcehockeyBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/19</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="bruinsIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Bruins</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game5 }} </div>
+  </div>
+
+  <!--Game 6 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 6</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="royalsIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Royals</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsCricketBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/20</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="indiansIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Indians</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game6 }} </div>
+  </div>
+
+  <!--Game 7 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 7</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="mancityIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Man City</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsSoccerBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/20</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="tottenhamIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Tottenham</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game7 }} </div>
+  </div>
+
+  <!--Game 8 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 8</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="westhamIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">West Ham</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsSoccerBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/20</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="leicesterIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Leicester City</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game8 }} </div>
+  </div>
+
+  <!--Game 9 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 9</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="yankeesIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Yankees</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsBaseballBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/20</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="kansasIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Royals</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game9 }} </div>
+  </div>
+
+  <!--Game 10 -->
+  <div id="tipFormContentContainer">
+    <div id="toprow">Game 10</div>
+    <div id="corerow">
+      <div id="leftpanel">
+        <div class="teamImgContainer" id="islandersIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Islanders</div>
+      </div>
+      <div id="midpanel">
+        <img id="sportsIcon" src="{% static 'icons/tipsIcehockeyBlue.svg' %}">
+        <div class="indyText blueText" id="vsContainer">VS</div>
+        <div  id="dateContainer">4/20</div>
+      </div>
+      <div id="rightpanel">
+        <div class="teamImgContainer" id="penguinsIMG"></div>
+        <div class="indyText blueText bold" id="teamTextContainer">Penguins</div>
+      </div>
+    </div>
+    <div class="yellowBorder" id="submitrow"> {{form.game10 }} </div>
+  </div>
+
+
+
+<div class="yellowBorder2 blueBackground bigShadow" id="tipFormSubmitContainer">
+  <button id="tipsSubmitButton" class="yellowBackground" type="submit">
     <img src="{% static 'icons/scoreSubmitBlue.svg' %}">
   </button>
+</div>
+
+</div>
+
+
 
 </form>
+
+</div>
 
 
 {% endblock %}

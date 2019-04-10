@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from catalog.models import PlayerModel, Rd1HoleModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, SportsTippingModel, EventEntryModel, LeaderBoardModel
+from catalog.models import PlayerModel, Rd1HoleModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel, FridaySocialModel, SaturdaySocialModel
 
 # Define new admin class - PLAYER
 class PlayerModelAdmin(admin.ModelAdmin):
@@ -63,10 +63,24 @@ class Rd1StablefordModelAdmin(admin.ModelAdmin):
 admin.site.register(Rd1StablefordModel, Rd1StablefordModelAdmin)
 
 
-# Define new admin class - TIPPING
+#Define new admin class - TIPPING
 class SportsTippingModelAdmin(admin.ModelAdmin):
-     list_display = ('name', 'tip1',)
-
-# Register admin class
+     list_display = ('name', 'time', 'password', 'game1', 'game2', 'game3', 'game4', 'game5', 'game6', 'game7', 'game8', 'game9', 'game10',)
+     ordering = ('time',)
+     
+#Register admin class
 admin.site.register(SportsTippingModel, SportsTippingModelAdmin)
 
+#Define new admin class - FRIDAY SOCIAL
+class FridaySocialModelAdmin(admin.ModelAdmin):
+     list_display = ('name', 'password', 'best', 'honorable',)
+     
+#Register admin class
+admin.site.register(FridaySocialModel, FridaySocialModelAdmin)
+
+#Define new admin class - SATURDAY SOCIAL
+class SaturdaySocialModelAdmin(admin.ModelAdmin):
+     list_display = ('name', 'password', 'best', 'honorable',)
+     
+#Register admin class
+admin.site.register(SaturdaySocialModel, SaturdaySocialModelAdmin)

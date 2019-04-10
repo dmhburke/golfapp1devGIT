@@ -28,7 +28,7 @@
 
 <!-- Single player row-->
     {% if active_players >= 1 %}
-    <div class="listBuffer">Group One</div>
+    <div class="indyText listBuffer">Group One</div>
     <div class="playerRow">
       <img class="playerImage" src="{{ player1.player_name.image.url }}">
       <div class="playerName indyText blueText">{{ player1.player_name.name }}</div>
@@ -64,7 +64,7 @@
     {% endif %}
 
     {% if active_players >= 5 %}
-    <div class="listBuffer">Group Two</div>
+    <div class="indyText listBuffer">Group Two</div>
     <div class="playerRow">
       <img class="playerImage" src="{{ player5.player_name.image.url }}">
       <div class="playerName indyText blueText">{{ player5.player_name.name }}</div>
@@ -97,7 +97,7 @@
     {% endif %}
 
     {% if active_players >= 9 %}
-    <div class="listBuffer">Group Three</div>
+    <div class="indyText listBuffer">Group Three</div>
     <div class="playerRow">
       <img class="playerImage" src="{{ player9.player_name.image.url }}">
       <div class="playerName indyText blueText">{{ player9.player_name.name }}</div>
