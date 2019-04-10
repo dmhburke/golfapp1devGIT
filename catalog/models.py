@@ -82,14 +82,22 @@ def leaderboard_update(sender, **kwargs):
         player12 = None
 
     if player1 is not None:
-        player1points = list(EventEntryModel.objects.filter(winner__name=player1).aggregate(Sum('points')).values())[0] 
+        player1points = list(EventEntryModel.objects.filter(winner__name=player1).aggregate(Sum('points')).values())[0]
+        if player1points is None:
+            player1pointsAdj = 0
+        else:
+            player1pointsAdj = player1points
         player1total, created = PlayerModel.objects.update_or_create(
-            name=player1, defaults ={'total': player1points,})
+            name=player1, defaults ={'total': player1pointsAdj,})
 
     if player2 is not None:
-        player2points = list(EventEntryModel.objects.filter(winner__name=player2).aggregate(Sum('points')).values())[0] 
-        player2total, created = PlayerModel.objects.update_or_create(
-            name=player2, defaults ={'total': player2points,})
+        player2points = list(EventEntryModel.objects.filter(winner__name=player2).aggregate(Sum('points')).values())[0]
+        if player2points is None:
+            player2pointsAdj = 0
+        else:
+            player2pointsAdj = player2points
+        player1total, created = PlayerModel.objects.update_or_create(
+            name=player2, defaults ={'total': player2pointsAdj,})
 
         
 class LeaderBoardModel(models.Model):
