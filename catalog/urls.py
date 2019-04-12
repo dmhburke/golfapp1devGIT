@@ -10,6 +10,7 @@ urlpatterns = [
     path('round1/<int:pk>', views.rd1holedetail, name='rd1holedetail'),
     path('round1/leaderboard', views.rd1leaderboard, name='rd1leaderboard'),
     path('entertips/', views.entertips, name='entertips'),
+    path('tipresults/', views.tipresults, name='tipresults'),
     path('entersocial/', views.entersocial, name='entersocial'),
     path('tourdetails/', views.tourdetails, name='tourdetails'),
     path('touragenda/', views.touragenda, name='touragenda'),

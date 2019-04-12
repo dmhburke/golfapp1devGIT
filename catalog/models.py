@@ -672,6 +672,111 @@ class SportsTippingModel(models.Model):
     game10 = models.CharField(max_length=10,choices=GAME_10,blank=True, null=True)
     time = models.DateTimeField(auto_now_add=True)
 
+@receiver(post_save, sender=SportsTippingModel)
+def send_to_scores(sender, instance, **kwargs):
+    submissions = SportsTippingModel.objects.all()
+    
+    for x in submissions:
+        addition_playerdeets = SportsTippingScoreModel.objects.update_or_create(name=x.name, defaults={'time': x.time,},)
+
+class SportsTippingResultsModel(models.Model):
+    name = models.CharField(max_length=20,default="result", blank=True, null=True)
+    result1 = models.CharField(max_length=20,choices=GAME_1R,blank=True, null=True)
+    result2 = models.CharField(max_length=20,choices=GAME_2R,blank=True, null=True)
+    result3 = models.CharField(max_length=20,choices=GAME_3R,blank=True, null=True)
+    result4 = models.CharField(max_length=20,choices=GAME_4R,blank=True, null=True)
+    result5 = models.CharField(max_length=20,choices=GAME_5R,blank=True, null=True)
+    result6 = models.CharField(max_length=20,choices=GAME_6R,blank=True, null=True)
+    result7 = models.CharField(max_length=20,choices=GAME_7R,blank=True, null=True)
+    result8 = models.CharField(max_length=20,choices=GAME_8R,blank=True, null=True)
+    result9 = models.CharField(max_length=20,choices=GAME_9R,blank=True, null=True)
+    result10 = models.CharField(max_length=20,choices=GAME_10R,blank=True, null=True)
+
+@receiver(post_save, sender=SportsTippingResultsModel)
+def send_to_scores2(sender, instance, **kwargs):
+    submissions = SportsTippingModel.objects.all()
+    results = SportsTippingResultsModel.objects.get(name='result')
+    result1 = results.result1
+    result2 = results.result2
+    result3 = results.result3
+    result4 = results.result4
+    result5 = results.result5
+    result6 = results.result6
+    result7 = results.result7
+    result8 = results.result8
+    result9 = results.result9
+    result10 = results.result10
+
+    for x in submissions:
+        tip1 = x.game1
+        tip2 = x.game2
+        tip3 = x.game3
+        tip4 = x.game4
+        tip5 = x.game5
+        tip6 = x.game6
+        tip7 = x.game7
+        tip8 = x.game8
+        tip9 = x.game9
+        tip10 = x.game10
+
+        def total_tips():
+            if tip1 == result1:
+                outcome1 = 1
+            else:
+                outcome1=0
+            if tip2 == result2:
+                outcome2 = 1
+            else:
+                outcome2 = 0
+            if tip3 == result3:
+                outcome3 = 1
+            else:
+                outcome3 = 0
+            if tip4 == result4:
+                outcome4 = 1
+            else:
+                outcome4 = 0
+            if tip5 == result5:
+                outcome5 = 1
+            else:
+                outcome5 = 0
+            if tip6 == result6:
+                outcome6 = 1
+            else:
+                outcome6 = 0
+            if tip7 == result7:
+                outcome7 = 1
+            else:
+                outcome7 = 0
+            if tip8 == result8:
+                outcome8 = 1
+            else:
+                outcome8 = 0
+            if tip9 == result9:
+                outcome9 = 1
+            else:
+                outcome9 = 0
+            if tip10 == result10:
+                outcome10 = 1
+            else:
+                outcome10 = 0
+                
+            total = outcome1 + outcome2 + outcome3 + outcome4 + outcome5 + outcome6 + outcome7 + outcome8 + outcome9 + outcome10
+
+            return total
+
+        total = total_tips()
+        
+        addition = SportsTippingScoreModel.objects.update_or_create(name=x.name, defaults={'total': total,},)
+
+class SportsTippingScoreModel(models.Model):
+    name = models.ForeignKey('PlayerModel',on_delete = models.CASCADE)
+    time = models.DateTimeField(blank=True, null=True)
+    total = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        ordering = ['-total', 'time']
+
 class FridaySocialModel(models.Model):
     name = models.ForeignKey('PlayerModel',on_delete = models.CASCADE)
     password = models.CharField(max_length=30, blank=True, null=True)

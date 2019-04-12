@@ -24,26 +24,20 @@ Indy1200 | login
 
 <body>
 <div class="" id="loginContainer">
-  <div class="indyText blueText yellowBackground" id="loginHeader">
-    Welcome to the official site of
+    <div class="indyText blueText yellowBackground" id="loginHeader">
+      Welcome to the official site of
+      </div>
+    <div class="indyText blueText" id="loginBody">
+      <div id="loginIconContainer">
+      <img id="loginIcon" src="{% static 'icons/tourdetailsFlagBlue.svg' %}"></div>
+      <div class="indyText blueText" id="loginTextContainer">The Indy<span id="loginTextContainer" class="indyText yellowText">1200</span></div>
+      <div id="loginAuthContainer">Player auth here</div>
     </div>
-  <div class="indyText blueText" id="loginBody">
-    <div id="loginIconContainer">
-    <img id="loginIcon" src="{% static 'icons/tourdetailsFlagBlue.svg' %}"></div>
-    <div class="indyText blueText" id="loginTextContainer">The Indy<span id="loginTextContainer" class="indyText yellowText">1200</span></div>
-    <div id="loginAuthContainer">Player auth here</div>
-  </div>
 
-  <div class="yellowBackground" id="loginFooter">
-      <a href="{% url 'landingpage' %}">
-    <div class="indyText yellowText blueBackground" id="entryButton">Click to enter</div></a>
-
-
-
-  </div>
-
-
-
+    <div class="yellowBackground" id="loginFooter">
+        <a href="{% url 'landingpage' %}">
+      <div class="indyText yellowText blueBackground" id="entryButton">Click to enter</div></a>
+    </div>
   </div>
 
 <a href="https://golfapp1dev.herokuapp.com/admin/" target="_blank">

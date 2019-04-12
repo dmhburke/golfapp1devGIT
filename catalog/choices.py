@@ -15,8 +15,9 @@ DAYS = (
     ("SUNDAY", "Sunday"),
     )
 
+#TIPPING INPUT
 GAME_1 = (
-    ("", "Select result"),
+    ("", "Lowest score Friday"),
     ("PLAYER_1", "Player 1"),
     ("PLAYER_2", "Player 2"),
     ("TIED", "Tied"),
@@ -30,14 +31,14 @@ GAME_2 = (
 
 GAME_3 = (
     ("", "Select result"),
-    ("TEAM_1", "Player 1"),
-    ("TEAM_2", "Player 2"),
+    ("PACERS", "Pacers"),
+    ("CELTICS", "Celtics"),
     )
 
 GAME_4 = (
-    ("", "Select result"),
-    ("TEAM_1", "Player 1"),
-    ("TEAM_2", "Player 2"),
+    ("", "Select results"),
+    ("NUGGETS", "Nuggets"),
+    ("SPURS", "Spurs"),
     )
 
 GAME_5 = (
@@ -75,6 +76,71 @@ GAME_9 = (
 
 GAME_10 = (
     ("", "Select result"),
+    ("ISLANDERS", "Islanders"),
+    ("PENGUINS", "Penguins"),
+    )
+
+#RESULTS CHECK - change empty result value
+GAME_1R = (
+    ("NOT_COMPLETE", "No result"),
+    ("PLAYER_1", "Player 1"),
+    ("PLAYER_2", "Player 2"),
+    ("TIED", "Tied"),
+    )
+
+GAME_2R = (
+    ("NOT_COMPLETE", "No result"),
+    ("GIANTS", "Giants"),
+    ("PIRATES", "Pirates"),
+    )
+
+GAME_3R = (
+    ("NOT_COMPLETE", "No result"),
+    ("PACERS", "Pacers"),
+    ("CELTICS", "Celtics"),
+    )
+
+GAME_4R = (
+    ("NOT_COMPLETE", "No result"),
+    ("NUGGETS", "Nuggets"),
+    ("SPURS", "Spurs"),
+    )
+
+GAME_5R = (
+    ("NOT_COMPLETE", "No result"),
+    ("MAPLE_LEAFS", "Maple Leafs"),
+    ("BRUINS", "Bruins"),
+    )
+
+GAME_6R = (
+    ("NOT_COMPLETE", "No result"),
+    ("ROYALS", "Player 1"),
+    ("INDIANS", "Player 2"),
+    ("TIED", "Tied"),
+    )
+
+GAME_7R = (
+    ("NOT_COMPLETE", "No result"),
+    ("MAN_CITY", "Man City"),
+    ("TOTTENHAM", "Tottenham"),
+    ("DRAW", "Draw"),
+    )
+
+GAME_8R = (
+    ("NOT_COMPLETE", "No result"),
+    ("WEST_HAM", "West Ham"),
+    ("LEICESTER_CITY", "Leicester City"),
+    ("DRAW", "Draw"),
+    )
+
+GAME_9R = (
+    ("NOT_COMPLETE", "No result"),
+    ("YANKEES", "Yankees"),
+    ("ROYALS", "Royals"),
+    )
+
+GAME_10R = (
+    ("NOT_COMPLETE", "No result"),
     ("ISLANDERS", "Islanders"),
     ("PENGUINS", "Penguins"),
     )

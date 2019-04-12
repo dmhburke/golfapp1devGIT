@@ -1,0 +1,39 @@
+{% extends "baseGolfApp.html" %}
+
+{% block content %}
+{% load static %}
+
+<div id="resultsTile" class="bigShadow">
+  <div id="resultsHeader" class="yellowBackground">
+    <div id="indyResultsHeader" class="indyText blueText">Indy1200</div>
+    <div id="textResultsHeader" class="bold">Tipping results</div>
+  </div>
+
+  <div id="resultsResultsTile" class="blueBackground">
+    <div id="resultsResultsText" class="indyText whiteText">Games played</div>
+      <div id="resultsResultsNum" class="indyText whiteText">/{{ num_games }}</div>
+  </div>
+
+
+  {% if recordedtips %}
+  {% for submission in recordedtips %}
+
+  <div id="playerResultsTile">
+    <img id="playerResultsImg" class="bigShadow" src="{{ submission.name.image.url }}">
+    <div id="playerResultsSubmit" class="">
+      <div id="playerResultsName" class="blueText indyText">{{ submission.name }}</div>
+      <div id="playerResultsTime" class="">{{submission.time|date:'l, g:i a'}}</div>
+    </div>
+    <div id="playerResultsScore" class="whiteText indyText blueBackground yellowBorder2">{{ submission.total }}</div>
+  </div>
+  <div id="resultsBorderBuffer"></div>
+{% endfor %}
+
+{% else %}
+No recorded tips
+
+{% endif %}
+
+</div>
+
+{% endblock %}

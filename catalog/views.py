@@ -6,7 +6,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 # Add models here
-from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,FridaySocialModel, TourAgendaModel
+from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,SportsTippingResultsModel, SportsTippingScoreModel, FridaySocialModel, TourAgendaModel
 # Add forms here
 from catalog.forms import Rd1ScoreForm, SportsTippingForm, FridaySocialForm, SaturdaySocialForm
 
@@ -210,7 +210,7 @@ def entertips(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
-            return redirect('entertips')        
+            return redirect('tipresults')        
 
     else:
         form = SportsTippingForm()
@@ -220,6 +220,17 @@ def entertips(request):
         }
 
     return render(request, 'enterSportsTips.html', context=context)
+
+def tipresults(request):
+    """Redirect page for input and show results"""
+    #Basic counts and definitions
+    recordedtips = SportsTippingScoreModel.objects.all()
+    
+    context = {
+        'recordedtips': recordedtips,
+        }
+
+    return render(request, 'tipResults.html', context=context)
 
 def entersocial(request):
     """Create view for social entry view"""

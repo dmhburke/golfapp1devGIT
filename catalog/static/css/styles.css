@@ -1419,7 +1419,119 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* END ENTERTIPS */
 
+/* START TIPS RESULTS */
+#resultsTile {
+  min-height: 400px;
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  border-radius: 20px;
+}
 
+#resultsHeader {
+  height: 75px;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#indyResultsHeader {
+    height: 55%;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2rem;
+}
+
+#textResultsHeader {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#resultsResultsTile {
+  height: 25px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0 10px;
+}
+
+#resultsResultsText {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 75%;
+  line-height: 25px;
+
+}
+
+#resultsResultsNum {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 60px;
+  text-align: center;
+  line-height: 25px;
+}
+
+#playerResultsTile {
+  height: 55px;
+  width: 100%;
+
+  margin: 10px auto;
+  padding: 0 10px;
+}
+
+#playerResultsImg {
+  height: 55px;
+  width: 55px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+
+}
+#playerResultsSubmit {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 150px;
+  margin-left: 5px;
+}
+
+#playerResultsName{
+  height: 60%;
+  width: 100%;
+  line-height: 50px;
+}
+
+#playerResultsTime{
+  width: 100%;
+  color: lightgrey;
+  font-size: 0.8rem;
+}
+
+#playerResultsScore {
+  height: 90%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  line-height: 45px;
+  text-align: center;
+}
+
+#resultsBorderBuffer {
+  width: 80%;
+  height: 5px;
+  border-bottom: 2px solid #F2F2F2;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+/* END TIPS RESULTS */
 
 /* START SOCIAL */
 #socialScrollContainer {
