@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from catalog.models import PlayerModel, Rd1HoleModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel, FridaySocialModel, SaturdaySocialModel
+from catalog.models import PlayerModel, Rd1HoleModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel, FridaySocialModel, SaturdaySocialModel, TourAgendaModel
 
 # Define new admin class - PLAYER
 class PlayerModelAdmin(admin.ModelAdmin):
@@ -84,3 +84,10 @@ class SaturdaySocialModelAdmin(admin.ModelAdmin):
      
 #Register admin class
 admin.site.register(SaturdaySocialModel, SaturdaySocialModelAdmin)
+
+#Define new admin class - TOUR EVENTS
+class TourAgendaModelAdmin(admin.ModelAdmin):
+     list_display = ('day', 'time', 'event', 'instructions',)
+     
+#Register admin class
+admin.site.register(TourAgendaModel, TourAgendaModelAdmin)

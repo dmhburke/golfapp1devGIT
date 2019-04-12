@@ -74,7 +74,7 @@ a:link {
 }
 
 .bigShadow {
-  box-shadow: 1px 1px 10px 4px lightgrey;
+  box-shadow: 1px 1px 6px 2px lightgrey;
 }
 
 .bigText {
@@ -186,64 +186,86 @@ a:link {
 
 /* START LOGIN */
 #loginContainer {
-  height: 300px;
-  width: 250px;
-  box-shadow: 1px 1px 10px 4px lightgrey;
+  height: 380px;
+  width: 300px;
+  box-shadow: 1px 1px 10px 4px grey;
   border-radius: 10px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  margin-top: -200px;
-  margin-left: -125px;
+  margin-top: -210px;
+  margin-left: -150px;
+  border: 2px solid white;
 }
 
-#loginText {
-  height: 20px;
+#loginHeader {
+  height: 25%;
   width: 100%;
-  margin-top: 80px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom: 3px solid #051864;
+  line-height: 140px;
   text-align: center;
-  line-height: 15px;
 }
 
-#loginIndy {
-  height: 70px;
+#loginBody {
+  height: 48.5%;
   width: 100%;
-  background-image:
-  url(https://static1.squarespace.com/static/582341fa9f7456df6245bfc3/t/5c4f886321c67c18ffe0c4d6/1548716151205/INDY1200+TITLE.png?format=1000w);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+
 }
 
-#loginEnter {
-
-  height: 80px;
+#loginIconContainer {
+  height: 20%;
   width: 100%;
-  padding-top: 10px;
 }
 
-#loginPassword {
-  width: 80%;
-  height: 30px;
-  line-height: 25px;
+#loginIcon {
+  display: block;
+  height: 40px;
   margin: 0 auto;
-  border: 1px solid white;
-  text-align: center;
-  background-color: #F2F2F2;
-  color: grey;
-  border: 1px solid white;
+  margin-top: 25px;
 }
-#loginButton {
-  width: 45%;
-  height: 30px;
-  margin: 10px auto;
+
+#loginTextContainer {
+  height: 35%;
+  width: 100%;
+  text-align: center;
+  line-height: 65px;
+  font-size: 3rem;
+
+}
+
+#loginAuthContainer {
+  height: 40%;
+  width: 80%;
+  background-color: white;
   border-radius: 10px;
+  background-color: #F2F2F2;
+  margin: 0 auto;
+  text-transform: none;
+  color: lightgrey;
+  text-align: center;
+  line-height: 50px;
+}
+
+#loginFooter {
+  height: 20%;
+  width: 100%;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  border-top: 3px solid #051864;
+}
+
+#entryButton {
+  height: 60%;
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin-top: 15px;
   color: white;
   text-align: center;
-  line-height: 27px;
-  box-shadow: 1px 1px 10px 4px lightgrey;
-  border: 1px solid #F8C145;
-
+  line-height: 37px;
 }
 
 #adminButton {
@@ -357,6 +379,7 @@ a:link {
   overflow: scroll;
   min-height: 370px;
   background-color: white;
+  -webkit-overflow-scrolling: touch;
 
 }
 
@@ -428,6 +451,7 @@ a:link {
   height: 365px;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
   border-bottom: 3px solid #F8C145;
 }
@@ -464,6 +488,7 @@ a:link {
   height: 107%;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 ::-webkit-scrollbar {
@@ -705,6 +730,7 @@ a:link {
   background-color: white;
   border: 1px solid white;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .playerRow {
@@ -808,6 +834,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 270px;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
 }
 
@@ -897,6 +924,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0px auto;
   border: 2px solid #F8C145;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 #leaderboardCounter {
@@ -995,6 +1023,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 460px;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
 }
 
@@ -1263,6 +1292,34 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
+#pacersIMG {
+    background-image: : url(https://media0.giphy.com/media/l0HlTCs04fbcFoZPy/giphy.gif);
+    background-position: 50% 50%;
+    background-size: 130px;
+    background-repeat: no-repeat;
+}
+
+#celticsIMG {
+  background-image: : url(https://i.gifer.com/JIPR.gif);
+  background-position: 50% 50%;
+  background-size: 130px;
+  background-repeat: no-repeat;
+}
+
+#nuggetsIMG {
+  background-image: : url(https://media.giphy.com/media/VRQez3CAXEqQg/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 130px;
+  background-repeat: no-repeat;
+}
+
+#spursIMG {
+  background-image: : url(https://media3.giphy.com/media/3o6YggssCsBHLt8LXa/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 130px;
+  background-repeat: no-repeat;
+}
+
 #leafsIMG {
   background-image: url(https://media1.tenor.com/images/6273dbc2ab501c2972506a5116119184/tenor.gif?itemid=8220469);
   background-position: 50% 50%;
@@ -1368,6 +1425,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 460px;
   width: 100%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   margin: 0;
 }
 
@@ -1544,6 +1602,311 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* END SOCIAL */
+
+/* START TOUR DETAILS */
+#tourdetailsButtonAgenda {
+  background-image:
+  linear-gradient(170deg,
+      rgba(5, 159, 255, 0),
+      rgba(0, 10, 22, 1)),
+  url(https://media.giphy.com/media/10rsLtGrOcCR0s/giphy.gif);
+  background-position: 40% 20%;
+}
+
+#tourdetailsButtonMap {
+  background-image:
+  linear-gradient(170deg,
+    rgba(5, 159, 255, 0.1),
+    rgba(0, 10, 22, 1)),
+  url(https://i.gifer.com/eQv.gif);
+  background-position: 40% 20%;
+}
+
+#tourdetailsButtonPlayers {
+  background-image:
+  linear-gradient(170deg,
+    rgba(5, 159, 255, 0.1),
+    rgba(0, 10, 22, 0.6)),
+  url(https://media1.tenor.com/images/33ffa1dea5bb4f374b535edff271a409/tenor.gif?itemid=5467302);
+  background-position: 0% 40%;
+}
+
+/* END TOUR DETAILS */
+
+/* START TOUR AGENDA */ /* YELLOW #F8C145 BLUE #051864 */
+
+#agendaTile {
+  min-height: 300px;
+  width: 95%;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding-bottom: 20px;
+}
+
+#agendaTileHeader {
+  height: 75px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom: 2px solid #051864;
+}
+
+#agendaIndyHeader {
+    height: 65%;
+    width: 100%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 2rem;
+
+}
+
+#agendaSubHeader {
+  text-align: center;
+}
+
+#dayHeader {
+  height: 30px;
+  width: 100%;
+  border-bottom: 2px solid #051864;
+  border-top: 2px solid #051864;
+  margin: 5px auto;
+  padding: 0px 3px;
+  line-height: 23px;
+}
+
+#eventEntryContainer {
+  height: 45px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px 3px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+#timeContainer {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 30%;
+  line-height: 30px;
+  padding: 0px 3px;
+}
+
+#eventContainer{
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 80%;
+  position: relative;
+}
+
+#eventDetails {
+  width: 100%;
+  height: 50%;
+  line-height: 30px;
+}
+
+#locationDetails {
+  width: 100%;
+  height: 40%;
+}
+
+#eventPoints {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 7px;
+}
+
+#eventBuffer {
+  height: 5px;
+  width: 70%;
+  border-bottom: 1px solid #051864;
+  margin: 0 auto;
+}
+
+#fullscreenScrollContainer {
+  height: 460px;
+  width: 100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+}
+
+/* START TOUR MAP */ /* YELLOW #F8C145 BLUE #051864 */
+#mapTile {
+  height: 420px;
+  width: 95%;
+  border-radius: 20px;
+  margin: 5px auto;
+  padding: 3px 0px;
+  padding-top: 15px;
+  position: relative;
+}
+
+#mapHeader {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 65px;
+  background-color: #F8C145;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 3px solid white;
+}
+
+#mapIndyHeader {
+    height: 65%;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 2rem;
+}
+
+#mapSubHeader {
+  text-align: center;
+  color: white;
+}
+
+#mapContainer {
+  margin: 0 auto;
+  width: 100%;
+  height: 95%;
+}
+
+#mapFooter {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: #F8C145;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top: 3px solid white;
+}
+
+
+/* START PLAYER DETAIL */
+
+#playerTile {
+  min-height: 420px;
+  width: 95%;
+  border-radius: 20px;
+  margin: 7px auto;
+  padding-bottom: 15px;
+}
+
+#playerTileHeader {
+  height: 75px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom: 2px solid #051864;
+}
+
+#playerIndyHeader {
+    height: 65%;
+    width: 100%;
+    text-align: center;
+    line-height: 70px;
+    font-size: 2rem;
+}
+
+#playerSubHeader {
+  text-align: center;
+}
+
+#playerDetailsTile {
+  height: 85px;
+  width: 95%;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 10px;
+}
+
+#imgContainer {
+  display: inline-block;
+  vertical-align: middle;
+  height: 70px;
+  width: 70px;
+  border: 1px solid grey;
+  border-radius: 100%;
+  margin: 2%;
+}
+
+#tourNumber {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 26px;
+}
+
+#jacketIcon {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  height: 30px;
+  width: 30px;
+
+}
+
+#contentHeader {
+  height: 40%;
+  width: 100%;
+}
+
+#tourIcon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 15%;
+}
+
+#contentContainer {
+  display: inline-block;
+  vertical-align: middle;
+
+  height: 90%;
+  width: 215px;
+}
+
+#detailsPlayerName {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 80%;
+  line-height: 29px;
+  padding: 0px 5px;
+}
+
+#contentDescription {
+  height: 85%;
+  width: 82%;
+  font-size: 0.7rem;
+  text-align: left;
+  margin-left: 38px;
+  padding-top: 1px;
+
+}
+#contentNickname {
+  height: 55%;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+
+  text-align: center;
+  line-height: 15px;
+}
+
+
 
 /*
 @media only screen and (min-width: 1200px) {

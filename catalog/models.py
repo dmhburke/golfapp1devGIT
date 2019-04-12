@@ -10,11 +10,14 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class PlayerModel(models.Model):
+    number = models.IntegerField(blank=True, null=True)
     name = models.CharField(max_length=30)
     HC = models.IntegerField(blank=True, null=True)
     image = models.ImageField(upload_to='playerimages', blank=True, null=True)
     jacket = models.CharField(max_length=10,choices=YES_NO,blank=True, null=True)
-    number = models.IntegerField(blank=True, null=True)
+    tournum = models.IntegerField(blank=True, null=True)
+    nickname = models.CharField(max_length=30, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     total = models.DecimalField(max_digits=6, decimal_places=2, default=0, blank=True, null=True)
 
     def __str__(self):
@@ -680,3 +683,13 @@ class SaturdaySocialModel(models.Model):
     password = models.CharField(max_length=30, blank=True, null=True)
     best = models.ForeignKey('PlayerModel',related_name='sat_best', on_delete = models.CASCADE)
     honorable = models.ForeignKey('PlayerModel',related_name='sat_honorable',on_delete = models.CASCADE)
+
+class TourAgendaModel(models.Model):
+    day = models.CharField(max_length=10,choices=DAYS,blank=True, null=True)
+    number = models.IntegerField(blank=True, null=True)
+    time = models.CharField(max_length=20,blank=True, null=True)
+    event = models.CharField(max_length=20,blank=True, null=True)
+    locations = models.CharField(max_length=20,blank=True, null=True)
+    instructions = models.TextField(blank=True, null=True)
+    total_points = models.IntegerField(blank=True, null=True)
+    

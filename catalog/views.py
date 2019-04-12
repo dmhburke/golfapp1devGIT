@@ -6,7 +6,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 # Add models here
-from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,FridaySocialModel 
+from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,FridaySocialModel, TourAgendaModel
 # Add forms here
 from catalog.forms import Rd1ScoreForm, SportsTippingForm, FridaySocialForm, SaturdaySocialForm
 
@@ -251,3 +251,44 @@ def entersocial(request):
         }
     
     return render(request, 'enterSocial.html', context=context)
+
+def tourdetails(request):
+    """Landing page for tour details"""
+
+    context = {}
+    
+    return render(request, 'tourDetails.html', context=context)
+
+def touragenda(request):
+    """Landing page for tour details"""
+    active_events = TourAgendaModel.objects.order_by('number')
+    friday_events = TourAgendaModel.objects.all().filter(day='FRIDAY')
+    saturday_events = TourAgendaModel.objects.all().filter(day='SATURDAY')
+    sunday_events = TourAgendaModel.objects.all().filter(day='SUNDAY')
+
+    context = {
+        'active_events': active_events,
+        'friday_events': friday_events,
+        'saturday_events': saturday_events,
+        'sunday_events': sunday_events,
+        }
+    
+    return render(request, 'tourAgenda.html', context=context)
+
+def tourmap(request):
+    """Landing page for tour details"""
+
+    context = {}
+    
+    return render(request, 'tourMap.html', context=context)
+
+def tourplayers(request):
+    """Landing page for tour details"""
+    active_players = PlayerModel.objects.order_by('number')
+    
+    context = {
+        'active_players': active_players,
+        }
+    
+    return render(request, 'tourPlayers.html', context=context)
+

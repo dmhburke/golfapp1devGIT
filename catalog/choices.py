@@ -9,6 +9,12 @@ YES_NO = (
     ("NO", "No"),
     )
 
+DAYS = (
+    ("FRIDAY", "Friday"),
+    ("SATURDAY", "Saturday"),
+    ("SUNDAY", "Sunday"),
+    )
+
 GAME_1 = (
     ("", "Select result"),
     ("PLAYER_1", "Player 1"),

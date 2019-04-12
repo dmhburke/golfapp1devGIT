@@ -11,5 +11,8 @@ urlpatterns = [
     path('round1/leaderboard', views.rd1leaderboard, name='rd1leaderboard'),
     path('entertips/', views.entertips, name='entertips'),
     path('entersocial/', views.entersocial, name='entersocial'),
-
+    path('tourdetails/', views.tourdetails, name='tourdetails'),
+    path('touragenda/', views.touragenda, name='touragenda'),
+    path('tourmap/', views.tourmap, name='tourmap'),
+    path('tourplayers/', views.tourplayers, name='tourplayers'),
 ]
