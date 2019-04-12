@@ -1293,30 +1293,31 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 #pacersIMG {
-    background-image: : url(https://media0.giphy.com/media/l0HlTCs04fbcFoZPy/giphy.gif);
-    background-position: 50% 50%;
-    background-size: 130px;
-    background-repeat: no-repeat;
+  background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+
 }
 
 #celticsIMG {
-  background-image: : url(https://i.gifer.com/JIPR.gif);
+  background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
   background-position: 50% 50%;
-  background-size: 130px;
+  background-size: 150px;
   background-repeat: no-repeat;
 }
 
 #nuggetsIMG {
-  background-image: : url(https://media.giphy.com/media/VRQez3CAXEqQg/giphy.gif);
+  background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
   background-position: 50% 50%;
-  background-size: 130px;
+  background-size: 150px;
   background-repeat: no-repeat;
 }
 
 #spursIMG {
-  background-image: : url(https://media3.giphy.com/media/3o6YggssCsBHLt8LXa/giphy.gif);
+  background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
   background-position: 50% 50%;
-  background-size: 130px;
+  background-size: 150px;
   background-repeat: no-repeat;
 }
 
