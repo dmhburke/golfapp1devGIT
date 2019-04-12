@@ -225,9 +225,23 @@ def tipresults(request):
     """Redirect page for input and show results"""
     #Basic counts and definitions
     recordedtips = SportsTippingScoreModel.objects.all()
+
+    try:
+        results = SportsTippingResultsModel.objects.get(name="result")
+    except:
+        pass
+
+    if results:
+        if results.result1 == "NOT_COMPLETE":
+            num_games = 0
+        else:
+            num_games = 1
+    else:
+        num_games = 0
     
     context = {
         'recordedtips': recordedtips,
+        'num_games': num_games,
         }
 
     return render(request, 'tipResults.html', context=context)
