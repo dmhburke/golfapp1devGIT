@@ -241,7 +241,7 @@ def tipresults(request):
         else:
             num_games2 = 1
         if results.result3 == "NOT_COMPLETE":
-            num_game3 = 0
+            num_games3 = 0
         else:
             num_games3 = 1
         if results.result4 == "NOT_COMPLETE":
