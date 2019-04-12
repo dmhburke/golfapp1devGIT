@@ -17,9 +17,9 @@ DAYS = (
 
 #TIPPING INPUT
 GAME_1 = (
-    ("", "Lowest score Friday"),
-    ("PLAYER_1", "Player 1"),
-    ("PLAYER_2", "Player 2"),
+    ("", "Low thru Fri"),
+    ("PLAYER_1", "Jordan Speith"),
+    ("PLAYER_2", "Dustin Johnson"),
     ("TIED", "Tied"),
     )
 
@@ -36,7 +36,7 @@ GAME_3 = (
     )
 
 GAME_4 = (
-    ("", "Select results"),
+    ("", "Select result"),
     ("NUGGETS", "Nuggets"),
     ("SPURS", "Spurs"),
     )
@@ -49,8 +49,8 @@ GAME_5 = (
 
 GAME_6 = (
     ("", "Select result"),
-    ("ROYALS", "Player 1"),
-    ("INDIANS", "Player 2"),
+    ("ROYALS", "Royals"),
+    ("INDIANS", "Indians"),
     ("TIED", "Tied"),
     )
 
@@ -83,8 +83,8 @@ GAME_10 = (
 #RESULTS CHECK - change empty result value
 GAME_1R = (
     ("NOT_COMPLETE", "No result"),
-    ("PLAYER_1", "Player 1"),
-    ("PLAYER_2", "Player 2"),
+    ("PLAYER_1", "Jordan Speith"),
+    ("PLAYER_2", "Dustin Johnson"),
     ("TIED", "Tied"),
     )
 
@@ -114,8 +114,8 @@ GAME_5R = (
 
 GAME_6R = (
     ("NOT_COMPLETE", "No result"),
-    ("ROYALS", "Player 1"),
-    ("INDIANS", "Player 2"),
+    ("ROYALS", "Royals"),
+    ("INDIANS", "Indians"),
     ("TIED", "Tied"),
     )
 

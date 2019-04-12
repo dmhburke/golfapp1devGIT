@@ -1276,6 +1276,23 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
   }
 
+#jsIMG {
+  background-image: url(https://media1.tenor.com/images/2c4d7ef7bb46fcf376b73fcc43662cbd/tenor.gif?itemid=9044317);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+
+}
+
+#djIMG {
+  background-image: url(https://media.giphy.com/media/I6MFNwVACDVC0/giphy.gif);
+  background-position: 50% 50%;
+  background-size: 150px;
+  background-repeat: no-repeat;
+
+}
+
+
 #giantsIMG {
   background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
   background-position: 50% 50%;

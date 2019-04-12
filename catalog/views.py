@@ -233,9 +233,48 @@ def tipresults(request):
 
     if results:
         if results.result1 == "NOT_COMPLETE":
-            num_games = 0
+            num_games1 = 0
         else:
-            num_games = 1
+            num_games1 = 1
+        if results.result2 == "NOT_COMPLETE":
+            num_games2 = 0
+        else:
+            num_games2 = 1
+        if results.result3 == "NOT_COMPLETE":
+            num_game3 = 0
+        else:
+            num_games3 = 1
+        if results.result4 == "NOT_COMPLETE":
+            num_games4 = 0
+        else:
+            num_games4 = 1
+        if results.result5 == "NOT_COMPLETE":
+            num_games5 = 0
+        else:
+            num_games5 = 1
+        if results.result6 == "NOT_COMPLETE":
+            num_games6 = 0
+        else:
+            num_games6 = 1
+        if results.result7 == "NOT_COMPLETE":
+            num_games7 = 0
+        else:
+            num_games7 = 1
+        if results.result8 == "NOT_COMPLETE":
+            num_games8 = 0
+        else:
+            num_games8 = 1
+        if results.result9 == "NOT_COMPLETE":
+            num_games9 = 0
+        else:
+            num_games9 = 1
+        if results.result10 == "NOT_COMPLETE":
+            num_games10 = 0
+        else:
+            num_games10 = 1
+
+        num_games = num_games1 +num_games2 +num_games3 +num_games4 +num_games5 +num_games6 +num_games7 +num_games8 +num_games9 +num_games10
+
     else:
         num_games = 0
     
