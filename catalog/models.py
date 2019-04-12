@@ -687,9 +687,9 @@ class SaturdaySocialModel(models.Model):
 class TourAgendaModel(models.Model):
     day = models.CharField(max_length=10,choices=DAYS,blank=True, null=True)
     number = models.IntegerField(blank=True, null=True)
-    time = models.CharField(max_length=20,blank=True, null=True)
-    event = models.CharField(max_length=20,blank=True, null=True)
-    locations = models.CharField(max_length=20,blank=True, null=True)
+    time = models.CharField(max_length=40,blank=True, null=True)
+    event = models.CharField(max_length=40,blank=True, null=True)
+    location = models.CharField(max_length=40,blank=True, null=True)
     instructions = models.TextField(blank=True, null=True)
     total_points = models.IntegerField(blank=True, null=True)
     
