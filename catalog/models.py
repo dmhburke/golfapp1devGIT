@@ -197,7 +197,7 @@ class LeaderBoardModel(models.Model):
     total_points = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
 
     class Meta:
-        ordering = ['total_points']
+        ordering = ['total_points', 'player__HC']
 
 #ROUND 1
 class Rd1HoleModel(models.Model):

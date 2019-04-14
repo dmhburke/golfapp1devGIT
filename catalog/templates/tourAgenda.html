@@ -9,7 +9,7 @@
     <div class="yellowText indyText" id="agendaIndyHeader">The Indy1200</div>
     <div class="bold blueText" id="agendaSubHeader">Touring agenda</div>
   </div>
-  
+
 {% if active_events %}
 
 {% if friday_events %}
@@ -49,7 +49,7 @@
         <div class= "indyText blueText" id="timeContainer">{{ event.time }}</div>
         <div id="eventContainer">
             <div class="indyText blueText" id="eventDetails">{{ event.event }}</div>
-            <div id="locationDetails">{{ event.locations }}</div>
+            <div id="locationDetails">{{ event.location }}</div>
             {% if event.total_points > 0 %}
             <div class="indyText blueBorder2 yellowBackground blueText" id="eventPoints">{{ event.total_points }}<span style="font-size: 0.5rem; color: white">pts</span></div>
             {% endif %}
@@ -60,7 +60,7 @@
         <div class= "indyText blueText" id="timeContainer">{{ event.time }}</div>
         <div id="eventContainer">
             <div class="indyText blueText" id="eventDetails">{{ event.event }}</div>
-            <div id="locationDetails">{{ event.locations }}</div>
+            <div id="locationDetails">{{ event.location }}</div>
             {% if event.total_points > 0 %}
             <div class="indyText blueBorder2 yellowBackground blueText" id="eventPoints">{{ event.total_points }}<span style="font-size: 0.5rem; color: white">pts</span></div>
             {% endif %}
@@ -78,7 +78,7 @@
           <div class= "indyText blueText" id="timeContainer">{{ event.time }}</div>
           <div id="eventContainer">
               <div class="indyText blueText" id="eventDetails">{{ event.event }}</div>
-              <div id="locationDetails">{{ event.locations }}</div>
+              <div id="locationDetails">{{ event.location }}</div>
               {% if event.total_points > 0 %}
               <div class="indyText blueBorder2 yellowBackground blueText" id="eventPoints">{{ event.total_points }}<span style="font-size: 0.5rem; color: white">pts</span></div>
               {% endif %}
@@ -89,7 +89,7 @@
           <div class= "indyText blueText" id="timeContainer">{{ event.time }}</div>
           <div id="eventContainer">
               <div class="indyText blueText" id="eventDetails">{{ event.event }}</div>
-              <div id="locationDetails">{{ event.locations }}</div>
+              <div id="locationDetails">{{ event.location }}</div>
               {% if event.total_points > 0 %}
               <div class="indyText blueBorder2 yellowBackground blueText" id="eventPoints">{{ event.total_points }}<span style="font-size: 0.5rem; color: white">pts</span></div>
               {% endif %}

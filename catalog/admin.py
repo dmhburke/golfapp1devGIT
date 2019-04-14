@@ -102,7 +102,7 @@ admin.site.register(SaturdaySocialModel, SaturdaySocialModelAdmin)
 #Define new admin class - TOUR EVENTS
 class TourAgendaModelAdmin(admin.ModelAdmin):
      list_display = ('day', 'time', 'event', 'number',)
-     ordering = ('-number',)
+     ordering = ('number',)
      
 #Register admin class
 admin.site.register(TourAgendaModel, TourAgendaModelAdmin)
