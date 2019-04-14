@@ -2038,7 +2038,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 /*DESKTOP RESPONSIVE*/
-@media only screen and (min-height: 700px) {
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)  {
 #bodyContentContainer {
     height: 600px;
     padding-top: 20px;
