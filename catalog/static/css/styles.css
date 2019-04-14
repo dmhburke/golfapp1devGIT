@@ -2037,9 +2037,13 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-
+/*DESKTOP RESPONSIVE*/
 @media only screen and (min-width: 1100px) {
 #bodyContentContainer {
-    height: 900px;
+    height: 500px;
+    padding-top: 25px;
   }
+
+#fullLeaderboardScrollContainer,#scoringScrollContainer, #scoreScrollContainer, #tipsScrollContainer, #socialScrollContainer, #fullscreenScrollContainer{
+    height: 350px;
 }
