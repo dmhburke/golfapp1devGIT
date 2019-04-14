@@ -17,8 +17,8 @@ DAYS = (
 
 #TIPPING INPUT
 GAME_1 = (
-    ("", "Low thru Fri"),
-    ("PLAYER_1", "Jordan Speith"),
+    ("", "RBC low thru Fri"),
+    ("PLAYER_1", "Jordan Spieth"),
     ("PLAYER_2", "Dustin Johnson"),
     ("TIED", "Tied"),
     )
@@ -83,7 +83,7 @@ GAME_10 = (
 #RESULTS CHECK - change empty result value
 GAME_1R = (
     ("NOT_COMPLETE", "No result"),
-    ("PLAYER_1", "Jordan Speith"),
+    ("PLAYER_1", "Jordan Spieth"),
     ("PLAYER_2", "Dustin Johnson"),
     ("TIED", "Tied"),
     )
