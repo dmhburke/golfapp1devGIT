@@ -2040,14 +2040,14 @@ input[type=number]::-webkit-outer-spin-button {
 /*DESKTOP RESPONSIVE*/
 @media only screen
 and (min-device-width : 375px)
-and (max-device-width : 812px)  {
+and (min-device-height : 810px)  {
 #bodyContentContainer {
-    height: 600px;
+    height: 570px;
     padding-top: 20px;
   }
 
 #fullLeaderboardScrollContainer,#scoringScrollContainer, #tipsScrollContainer, #socialScrollContainer, #fullscreenScrollContainer{
-    height: 550px;
+    height: 570px;
 }
 
 #scoreScrollContainer {
@@ -2055,7 +2055,7 @@ and (max-device-width : 812px)  {
 }
 
 #round1Leaderboard {
-  height: 400px;
+  height: 380px;
 }
 
 }
