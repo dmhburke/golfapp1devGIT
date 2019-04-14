@@ -2042,12 +2042,12 @@ input[type=number]::-webkit-outer-spin-button {
 and (min-device-width : 375px)
 and (min-device-height : 810px)  {
 #bodyContentContainer {
-    height: 570px;
+    height: 550px;
     padding-top: 20px;
   }
 
 #fullLeaderboardScrollContainer,#scoringScrollContainer, #tipsScrollContainer, #socialScrollContainer, #fullscreenScrollContainer{
-    height: 570px;
+    height: 550px;
 }
 
 #scoreScrollContainer {

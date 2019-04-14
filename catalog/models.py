@@ -797,4 +797,7 @@ class TourAgendaModel(models.Model):
     location = models.CharField(max_length=40,blank=True, null=True)
     instructions = models.TextField(blank=True, null=True)
     total_points = models.IntegerField(blank=True, null=True)
+
+    class Meta:
+        ordering = ['number']
     
