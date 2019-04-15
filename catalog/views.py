@@ -357,11 +357,10 @@ def tourplayers(request):
     return render(request, 'tourPlayers.html', context=context)
 
 def topgolf(request):
-    """record top golf results"""
+    """display top golf results"""
 
-    entry = TopGolfModel.objects.all()
-    
-    if entry:    
+    try:
+        entry = TopGolfModel.objects.all()
         reference_entry = TopGolfModel.objects.get(reference="reference")
         topgolf1 = reference_entry.first
         topgolf2 = reference_entry.second
@@ -370,7 +369,7 @@ def topgolf(request):
         topgolf5= reference_entry.fifth
         topgolf6 = reference_entry.sixth
 
-    else:
+    except:
         topgolf1 = "Not decided yet"
         topgolf2 = "Not decided yet"
         topgolf3 = "Not decided yet"
