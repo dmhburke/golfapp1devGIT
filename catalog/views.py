@@ -6,7 +6,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 # Add models here
-from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,SportsTippingResultsModel, SportsTippingScoreModel, FridaySocialModel, TourAgendaModel
+from catalog.models import Rd1HoleModel, PlayerModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel,SportsTippingResultsModel, SportsTippingScoreModel, FridaySocialModel, TourAgendaModel, TopGolfModel, RacingModel
 # Add forms here
 from catalog.forms import Rd1ScoreForm, SportsTippingForm, FridaySocialForm, SaturdaySocialForm
 
@@ -355,4 +355,70 @@ def tourplayers(request):
         }
     
     return render(request, 'tourPlayers.html', context=context)
+
+def topgolf(request):
+    """record top golf results"""
+
+    entry = TopGolfModel.objects.all()
+    
+    if entry:    
+        reference_entry = TopGolfModel.objects.get(reference="reference")
+        topgolf1 = reference_entry.first
+        topgolf2 = reference_entry.second
+        topgolf3 = reference_entry.third
+        topgolf4 = reference_entry.fourth
+        topgolf5= reference_entry.fifth
+        topgolf6 = reference_entry.sixth
+
+    else:
+        topgolf1 = "Not decided yet"
+        topgolf2 = "Not decided yet"
+        topgolf3 = "Not decided yet"
+        topgolf4 = "Not decided yet"
+        topgolf5 = "Not decided yet"
+        topgolf6 = "Not decided yet"
+
+    context = {
+        'topgolf1': topgolf1,
+        'topgolf2': topgolf2,
+        'topgolf3': topgolf3,
+        'topgolf4': topgolf4,
+        'topgolf5': topgolf5,
+        'topgolf6': topgolf6,
+        }
+
+    return render(request, 'topgolf.html', context=context)
+
+def racing(request):
+    """display racing results"""
+
+    entry = RacingModel.objects.all()
+    
+    if entry:    
+        reference_entry = RacingModel.objects.get(reference="reference")
+        racing1 = reference_entry.first
+        racing2 = reference_entry.second
+        racing3 = reference_entry.third
+        racing4 = reference_entry.fourth
+        racing5= reference_entry.fifth
+        racing6 = reference_entry.sixth
+
+    else:
+        racing1 = "Not started"
+        racing2 = "Not started"
+        racing3 = "Not started"
+        racing4 = "Not started"
+        racing5 = "Not started"
+        racing6 = "Not started"
+
+    context = {
+        'racing1': racing1,
+        'racing2': racing2,
+        'racing3': racing3,
+        'racing4': racing4,
+        'racing5': racing5,
+        'racing6': racing6,
+        }
+
+    return render(request, 'racing.html', context=context)
 

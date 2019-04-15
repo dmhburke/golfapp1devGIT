@@ -16,7 +16,7 @@
 <div  id="fullLeaderboardRow">
   <div class="yellowBackground indyText blueText" id="fullLeaderboardPosition">{{ forloop.counter }}</div>
   <div id="fullLeaderboardPlayer">
-    <img id="fullLeaderboardImage" src="{{ player.image.url }}">
+    <img id="fullLeaderboardImage" class="bigShadow" src="{{ player.image.url }}">
     <div class="indyText blueText" id="fullLeaderboardName">{{ player.name }}</div>
     <div class="indyText yellowText blueBackground" id="fullLeaderboardScore">{{ player.total|floatformat:"0" }}</div>
   </div></div>
