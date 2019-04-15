@@ -30,7 +30,7 @@ def fullleaderboard (request):
     score_submit = EventEntryModel.objects.exclude(winner__isnull=True).count()
     active_players = PlayerModel.objects.all()
 
-    loaded_points = EventEntryModel.objects.aggregate(Sum('price'))
+    loaded_points = EventEntryModel.objects.aggregate(Sum('points'))
     
     context = {
     'score_submit': score_submit,
