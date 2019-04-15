@@ -392,9 +392,8 @@ def topgolf(request):
 def racing(request):
     """display racing results"""
 
-    entry = RacingModel.objects.all()
-    
-    if entry:    
+    try:
+        entry = RacingModel.objects.all()
         reference_entry = RacingModel.objects.get(reference="reference")
         racing1 = reference_entry.first
         racing2 = reference_entry.second
@@ -402,8 +401,7 @@ def racing(request):
         racing4 = reference_entry.fourth
         racing5= reference_entry.fifth
         racing6 = reference_entry.sixth
-
-    else:
+    except:
         racing1 = "Not started"
         racing2 = "Not started"
         racing3 = "Not started"
