@@ -35,7 +35,7 @@
 
 
 </div>
-<div id="leaderboardTotalPoints" style="color: lightgrey; font-size: 0.8rem">Total points: {{ loaded_points }}</div>
-<div id="leaderboardTotalPoints" style="color: lightgrey; font-size: 0.8rem">Points awarded: {{ awarded_points }}</div>
+<div id="leaderboardTotalPoints" style="color: lightgrey; font-size: 0.8rem">Total points: {{ loaded_points|floatformat:"0" }}</div>
+<div id="leaderboardTotalPoints" style="color: lightgrey; font-size: 0.8rem">Points awarded: {{ awarded_points|floatformat:"0" }}</div>
 </div>
 {% endblock %}
