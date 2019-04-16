@@ -699,8 +699,8 @@ a:link {
 #rd2ScorecardLink {
   background-image:
     linear-gradient(170deg,
-    rgba(5, 24, 100, 0.2),
-    rgba(5, 24, 100, 0.4)),
+    rgba(255, 255, 255, 0.4),
+    rgba(5, 24, 100, 0.7)),
     url(https://media.golfdigest.com/photos/5856c2cf2991c6d81317ebd3/master/w_768/2017-93-Crooked-Stick-GC-hole-11.jpg);
   background-position: 50% 50%;
   background-size: cover;
