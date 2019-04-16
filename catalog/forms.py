@@ -46,7 +46,7 @@ class Rd1ScoreForm(ModelForm):
 
 class SportsTippingForm(ModelForm):
         name = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Player name', required=True)
-        password = forms.CharField(widget=forms.PasswordInput, label='', required=True)
+        password = forms.CharField(widget=forms.PasswordInput, label='', required=False)
         game1 = forms.ChoiceField(choices=GAME_1, required=True)
         game2 = forms.ChoiceField(choices=GAME_2, required=True)
         game3 = forms.ChoiceField(choices=GAME_3, required=True)

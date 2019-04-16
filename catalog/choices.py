@@ -71,7 +71,7 @@ GAME_8 = (
 GAME_9 = (
     ("", "Select result"),
     ("YANKEES", "Yankees"),
-    ("ROYALS", "Royals"),
+    ("KANSAS_CITY", "Kansas City"),
     )
 
 GAME_10 = (
@@ -136,7 +136,7 @@ GAME_8R = (
 GAME_9R = (
     ("NOT_COMPLETE", "No result"),
     ("YANKEES", "Yankees"),
-    ("ROYALS", "Royals"),
+    ("KANSAS_CITY", "Kansas City"),
     )
 
 GAME_10R = (
