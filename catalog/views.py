@@ -63,8 +63,12 @@ class rd1holelist (generic.ListView):
         ld_hole = Rd1HoleModel.objects.filter(LD__gt=0)
         tussle_hole = Rd1HoleModel.objects.filter(tussle__isnull=False)
 
+        tussle_sum1 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot1_stbl')).values())[0]
+
         context['ctp_hole'] = ctp_hole
         context['ld_hole'] = ld_hole
+## Tussle calculation ##
+        context['tussle_sum1'] = tussle_sum1
         return context
 
 def rd1holedetail(request,pk):
