@@ -689,19 +689,31 @@ a:link {
 #rd1ScorecardLink {
   background-image:
     linear-gradient(170deg,
-    rgba(5, 24, 100, 0.3),
-    rgba(5, 24, 100, 0.9)),
+    rgba(5, 24, 100, 0.2),
+    rgba(5, 24, 100, 0.4)),
     url(https://golfadvisor.brightspotcdn.com/dims4/default/de6b22e/2147483647/strip/true/crop/604x390+0+32/resize/930x600!/quality/90/?url=https%3A%2F%2Fgolfadvisor.brightspotcdn.com%2F36%2F6c%2F381b3339e6a7b4787433bd51d2c7%2F61623.jpg);
   background-position: 50% 50%;
   background-size: cover;
 }
 
 #rd2ScorecardLink {
-
+  background-image:
+    linear-gradient(170deg,
+    rgba(5, 24, 100, 0.2),
+    rgba(5, 24, 100, 0.4)),
+    url(https://media.golfdigest.com/photos/5856c2cf2991c6d81317ebd3/master/w_768/2017-93-Crooked-Stick-GC-hole-11.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 #rd3ScorecardLink {
-
+  background-image:
+    linear-gradient(170deg,
+    rgba(5, 24, 100, 0.2),
+    rgba(5, 24, 100, 0.4)),
+    url(https://www.rejournals.com/rejournals/media/RE-archives/Prairie-View-Golf-Club-0293.jpg?maxsidesize=300);
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 
