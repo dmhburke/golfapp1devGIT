@@ -693,6 +693,7 @@ a:link {
     rgba(5, 24, 100, 0.9)),
     url(https://golfadvisor.brightspotcdn.com/dims4/default/de6b22e/2147483647/strip/true/crop/604x390+0+32/resize/930x600!/quality/90/?url=https%3A%2F%2Fgolfadvisor.brightspotcdn.com%2F36%2F6c%2F381b3339e6a7b4787433bd51d2c7%2F61623.jpg);
   background-position: 50% 50%;
+  background-size: cover;
 }
 
 #rd2ScorecardLink {
