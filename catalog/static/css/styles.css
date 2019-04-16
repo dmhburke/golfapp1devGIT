@@ -669,7 +669,7 @@ a:link {
 }
 
 
-#rd1ScorecardLink {
+.ScorecardLink {
   display: inline-block;
   vertical-align: middle;
   margin: 5px;
@@ -677,12 +677,31 @@ a:link {
   height: 65px;
   width: 130px;
   border-radius: 20px;
-  background-color: #F2F2F2;
   border: 2px solid #F8C145;
   font-size: 1rem;
   line-height: 57px;
   float: left;
+  font-weight: bold;
+  color: white;
 }
+
+#rd1ScorecardLink {
+  background-image:
+    linear-gradient(170deg,
+    rgba(5, 159, 255, 0.1),
+    rgba(0, 10, 22, 0.6)),
+    url(https://media1.tenor.com/images/33ffa1dea5bb4f374b535edff271a409/tenor.gif?itemid=5467302);
+  background-position: 0% 40%;
+}
+
+#rd2ScorecardLink {
+
+}
+
+#rd3ScorecardLink {
+
+}
+
 
 /* END RD1HOLELIST */
 
