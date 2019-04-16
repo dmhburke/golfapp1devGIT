@@ -46,17 +46,17 @@ class Rd1ScoreForm(ModelForm):
 
 class SportsTippingForm(ModelForm):
         name = forms.ModelChoiceField(queryset=PlayerModel.objects.all(), empty_label='Player name', required=True)
-        password = forms.CharField(widget=forms.PasswordInput, label='')
-        game1 = forms.ChoiceField(choices=GAME_1, required=False)
-        game2 = forms.ChoiceField(choices=GAME_2, required=False)
-        game3 = forms.ChoiceField(choices=GAME_3, required=False)
-        game4 = forms.ChoiceField(choices=GAME_4, required=False)
-        game5 = forms.ChoiceField(choices=GAME_5, required=False)
-        game6 = forms.ChoiceField(choices=GAME_6, required=False)
-        game7 = forms.ChoiceField(choices=GAME_7, required=False)
-        game8 = forms.ChoiceField(choices=GAME_8, required=False)
-        game9 = forms.ChoiceField(choices=GAME_9, required=False)
-        game10 = forms.ChoiceField(choices=GAME_10, required=False)
+        password = forms.CharField(widget=forms.PasswordInput, label='', required=False)
+        game1 = forms.ChoiceField(choices=GAME_1, required=True)
+        game2 = forms.ChoiceField(choices=GAME_2, required=True)
+        game3 = forms.ChoiceField(choices=GAME_3, required=True)
+        game4 = forms.ChoiceField(choices=GAME_4, required=True)
+        game5 = forms.ChoiceField(choices=GAME_5, required=True)
+        game6 = forms.ChoiceField(choices=GAME_6, required=True)
+        game7 = forms.ChoiceField(choices=GAME_7, required=True)
+        game8 = forms.ChoiceField(choices=GAME_8, required=True)
+        game9 = forms.ChoiceField(choices=GAME_9, required=True)
+        game10 = forms.ChoiceField(choices=GAME_10, required=True)
     
         class Meta:
                 model = SportsTippingModel
