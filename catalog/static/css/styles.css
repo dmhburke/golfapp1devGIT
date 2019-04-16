@@ -1276,6 +1276,23 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
   }
 
+  #jsIMG {
+    background-image: url(https://media.giphy.com/media/NlR3NWztPvqKs/giphy.gif);
+    background-position: 50% 50%;
+    background-size: 150px;
+    background-repeat: no-repeat;
+
+  }
+
+  #djIMG {
+    background-image: url(https://media.golfdigest.com/photos/58ac90b756d0363727f1bb30/1:1/w_285,c_limit/Dustin-Johnson-swing-sequence-downline.gif);
+    background-position: 50% 50%;
+    background-size: 150px;
+    background-repeat: no-repeat;
+
+  }
+
+
 #giantsIMG {
   background-image: url(https://media3.giphy.com/media/3RxaetKNiSE4o/giphy.gif);
   background-position: 50% 50%;

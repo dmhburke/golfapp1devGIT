@@ -56,7 +56,7 @@ admin.site.register(Rd1ScoreModel, Rd1ScoreModelAdmin)
 
 # Define new admin class - STABLEFORD
 class Rd1StablefordModelAdmin(admin.ModelAdmin):
-     list_display = ('hole', 'slot1_stbl', 'slot2_stbl', 'slot3_stbl',)
+     list_display = ('hole', 'slot1_stbl', 'slot2_stbl', 'slot3_stbl', 'slot4_stbl', 'slot5_stbl', 'slot6_stbl', 'slot7_stbl', 'slot8_stbl', 'slot9_stbl', 'slot10_stbl', 'slot11_stbl', 'slot12_stbl',)
      ordering = ('hole',)
 
 # Register admin class
