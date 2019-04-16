@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from catalog.models import PlayerModel, Rd1HoleModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel, SportsTippingResultsModel, SportsTippingScoreModel, FridaySocialModel, SaturdaySocialModel, TourAgendaModel, TopGolfModel, RacingModel
+from catalog.models import PlayerModel, Rd1HoleModel, Rd1SlotModel, Rd1ScoreModel, Rd1StablefordModel, Rd2HoleModel, Rd2SlotModel, Rd2ScoreModel, Rd2StablefordModel, EventEntryModel, LeaderBoardModel, SportsTippingModel, SportsTippingResultsModel, SportsTippingScoreModel, FridaySocialModel, SaturdaySocialModel, TourAgendaModel, TopGolfModel, RacingModel
 
 # Define new admin class - PLAYER
 class PlayerModelAdmin(admin.ModelAdmin):
@@ -28,7 +28,7 @@ class LeaderBoardModelAdmin(admin.ModelAdmin):
 # Register admin class
 admin.site.register(LeaderBoardModel, LeaderBoardModelAdmin)
 
-# Define new admin class - HOLE
+# Define new admin class - RD 1 HOLE
 class Rd1HoleModelAdmin(admin.ModelAdmin):
      list_display = ('number', 'par', 'index', 'meters', 'CTP', 'LD', 'tussle',)
      ordering = ('number',)
@@ -37,7 +37,7 @@ class Rd1HoleModelAdmin(admin.ModelAdmin):
 admin.site.register(Rd1HoleModel, Rd1HoleModelAdmin)
 
 
-# Define new admin class - SLOT
+# Define new admin class - RD 1 SLOT
 class Rd1SlotModelAdmin(admin.ModelAdmin):
      list_display = ('player_slot', 'player_name', 'player_holesplayed', 'player_score', 'player_stbl', 'player_rankscore',)
      ordering = ('player_slot',)
@@ -46,7 +46,7 @@ class Rd1SlotModelAdmin(admin.ModelAdmin):
 admin.site.register(Rd1SlotModel, Rd1SlotModelAdmin)
 
 
-# Define new admin class - SCORE
+# Define new admin class - RD 1 SCORE
 class Rd1ScoreModelAdmin(admin.ModelAdmin):
      list_display = ('hole', 'slot1_score', 'slot2_score', 'slot3_score', 'ctp', 'ld',)
      ordering = ('hole',)
@@ -54,13 +54,48 @@ class Rd1ScoreModelAdmin(admin.ModelAdmin):
 # Register admin class
 admin.site.register(Rd1ScoreModel, Rd1ScoreModelAdmin)
 
-# Define new admin class - STABLEFORD
+# Define new admin class - RD 1 STABLEFORD
 class Rd1StablefordModelAdmin(admin.ModelAdmin):
      list_display = ('hole', 'slot1_stbl', 'slot2_stbl', 'slot3_stbl', 'slot4_stbl', 'slot5_stbl', 'slot6_stbl', 'slot7_stbl', 'slot8_stbl', 'slot9_stbl', 'slot10_stbl', 'slot11_stbl', 'slot12_stbl',)
      ordering = ('hole',)
 
 # Register admin class
 admin.site.register(Rd1StablefordModel, Rd1StablefordModelAdmin)
+
+# Define new admin class - RD 2 HOLE
+class Rd2HoleModelAdmin(admin.ModelAdmin):
+     list_display = ('number', 'par', 'index', 'meters', 'CTP', 'LD', 'tussle',)
+     ordering = ('number',)
+
+# Register admin class
+admin.site.register(Rd2HoleModel, Rd2HoleModelAdmin)
+
+
+# Define new admin class - RD 2 SLOT
+class Rd2SlotModelAdmin(admin.ModelAdmin):
+     list_display = ('player_slot', 'player_name', 'player_holesplayed', 'player_score', 'player_stbl', 'player_rankscore',)
+     ordering = ('player_slot',)
+
+# Register admin class
+admin.site.register(Rd2SlotModel, Rd2SlotModelAdmin)
+
+
+# Define new admin class - RD 2 SCORE
+class Rd2ScoreModelAdmin(admin.ModelAdmin):
+     list_display = ('hole', 'slot1_score', 'slot2_score', 'slot3_score', 'ctp', 'ld',)
+     ordering = ('hole',)
+
+# Register admin class
+admin.site.register(Rd2ScoreModel, Rd2ScoreModelAdmin)
+
+# Define new admin class - RD 2 STABLEFORD
+class Rd2StablefordModelAdmin(admin.ModelAdmin):
+     list_display = ('hole', 'slot1_stbl', 'slot2_stbl', 'slot3_stbl', 'slot4_stbl', 'slot5_stbl', 'slot6_stbl', 'slot7_stbl', 'slot8_stbl', 'slot9_stbl', 'slot10_stbl', 'slot11_stbl', 'slot12_stbl',)
+     ordering = ('hole',)
+
+# Register admin class
+admin.site.register(Rd2StablefordModel, Rd2StablefordModelAdmin)
+
 
 
 #Define new admin class - TIP ENTRY
