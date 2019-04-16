@@ -1,0 +1,42 @@
+{% extends "baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="yellowBackground indyText blueText" id="round1LeaderboardHeader">
+  Leaderboard
+</div></a>
+<div class="" id="round1Leaderboard">
+  <div id="leaderboardHeaderRow" class="blueBackground whiteText">
+    <div id="headerRowPlayerName">Player name</div>
+    <div id="headerRowPoints">Points</div>
+    <div id="headerRowThru">Thru</div>
+  </div>
+
+  {% if playing_players %}
+  {% for player in playing_players %}
+
+  <div class="playerRow">
+    <div class="indyText blueText yellowBorder" id="leaderboardCounter">{{ forloop.counter }}</div>
+    <img id="playerImage" src="{{ player.player_name.image.url }}">
+    <div id="leaderboardPlayerName" class="indyText blueText">{{ player.player_name }}</div>
+    <div id="leaderboardPlayerPoints" class="indyText blueText yellowBackground">{{ player.player_stbl }}</div>
+    <div id="leaderboardPlayerHoles" class="indyText blueText">{{ player.player_holesplayed }}</div>
+  </div>
+
+  {% endfor %}
+  {% else %}
+  No scores recorded yet
+  {% endif %}
+</div>
+
+
+<div class="yellowBackground indyText blueText" id="round1LeaderboardFooter">
+  <a href="{% url 'rd3holelist'%}">
+  <div id="leaderboardBackButton">
+    <img id="leaderboardBackIcon" src="{% static 'icons/leaderboardBackIconBlue.svg' %}">
+  </div>
+</div></a>
+
+{% endblock %}

@@ -21,4 +21,7 @@ urlpatterns = [
     path('round2/', views.rd2holelist.as_view(), name='rd2holelist'),
     path('round2/<int:pk>', views.rd2holedetail, name='rd2holedetail'),
     path('round2/leaderboard', views.rd2leaderboard, name='rd2leaderboard'),
+    path('round3/', views.rd3holelist.as_view(), name='rd3holelist'),
+    path('round3/<int:pk>', views.rd3holedetail, name='rd3holedetail'),
+    path('round3/leaderboard', views.rd3leaderboard, name='rd3leaderboard'),
 ]
