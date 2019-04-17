@@ -8,8 +8,9 @@
     {% csrf_token %}
 
 <div id="holeDetailsContainer">
-<!--insert TUSSLE IF STATEMENT HERE -->
-  <div id="tussleName" class="indyText yellowBackground whiteText">The Crooked Stick Stampede</div>
+{% if hole_tussle == "YES" %}
+  <div id="tussleName" class="indyText yellowBackground whiteText">The Brickyard Battle</div>
+{% endif %}
   <div class="indyText whiteText" id="holePar">Par<br><span class="yellowText indyText" style="font-size: 1.75rem">{{ hole_par }}</span></div>
   <div class="yellowBorder indyText blueText" id="holeNumber">{{ hole_number }}</div>
   <div class="indyText whiteText" id="holeIndex">Index<br><span class="yellowText indyText" style="font-size: 1.75rem">{{ hole_index }}</span></div>

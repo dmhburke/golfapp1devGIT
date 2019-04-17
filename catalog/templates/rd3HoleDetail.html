@@ -3,32 +3,37 @@
 {% block content %}
 
 {% load static %}
-<div id="holeDetailsContainer">
-  <div class="indyText whiteText" id="holePar">Par<br><span class="yellowText indyText" style="font-size: 1.75rem">{{ hole_par }}</span></div>
-  <div class="yellowBorder indyText blueText" id="holeNumber">{{ hole_number }}</div>
-  <div class="indyText whiteText" id="holeIndex">Index<br><span class="yellowText indyText" style="font-size: 1.75rem">{{ hole_index }}</span></div>
-</div>
 
 <form method = "POST">
     {% csrf_token %}
+
+<div id="holeDetailsContainer">
+{% if hole_tussle == "YES" %}
+  <div id="tussleName" class="indyText yellowBackground whiteText">The Prairie View Corkscrew</div>
+{% endif %}
+  <div class="indyText whiteText" id="holePar">Par<br><span class="yellowText indyText" style="font-size: 1.75rem">{{ hole_par }}</span></div>
+  <div class="yellowBorder indyText blueText" id="holeNumber">{{ hole_number }}</div>
+  <div class="indyText whiteText" id="holeIndex">Index<br><span class="yellowText indyText" style="font-size: 1.75rem">{{ hole_index }}</span></div>
 {% if hole_ctp > 0 %}
-<div class="yellowBorder ctpSubmit yellowBackground">
-<div class="blueText" id="ctpLabelContainer">CTP</div>
-<div id="ctpFormContainer">{{ form.ctp }}</div></div>
+  <div class="yellowBorder ctpSubmit yellowBackground">
+  <div class="blueText" id="ctpLabelContainer">CTP</div>
+  <div id="ctpFormContainer">{{ form.ctp }}</div></div>
 
 {% elif hole_ld > 0 %}
-<div class="yellowBorder ctpSubmit yellowBackground">
-<div class="blueText" id="ctpLabelContainer">LD</div>
-<div id="ctpFormContainer">{{ form.ld }}</div></div>
+  <div class="yellowBorder ctpSubmit yellowBackground">
+  <div class="blueText" id="ctpLabelContainer">LD</div>
+  <div id="ctpFormContainer">{{ form.ld }}</div></div>
 
-{% endif %}
+  {% endif %}
+
+</div>
 
 <div id="scoreScrollContainer">
 <div id="scoreSubmitContainer">
 
 <!-- Single player row-->
     {% if active_players >= 1 %}
-    <div class="indyText listBuffer">Group One</div>
+    <div class="listBuffer">Group One</div>
     <div class="playerRow">
       <img class="playerImage" src="{{ player1.player_name.image.url }}">
       <div class="playerName indyText blueText">{{ player1.player_name.name }}</div>
@@ -64,7 +69,7 @@
     {% endif %}
 
     {% if active_players >= 5 %}
-    <div class="indyText listBuffer">Group Two</div>
+    <div class="listBuffer">Group Two</div>
     <div class="playerRow">
       <img class="playerImage" src="{{ player5.player_name.image.url }}">
       <div class="playerName indyText blueText">{{ player5.player_name.name }}</div>
@@ -97,7 +102,7 @@
     {% endif %}
 
     {% if active_players >= 9 %}
-    <div class="indyText listBuffer">Group Three</div>
+    <div class="listBuffer">Group Three</div>
     <div class="playerRow">
       <img class="playerImage" src="{{ player9.player_name.image.url }}">
       <div class="playerName indyText blueText">{{ player9.player_name.name }}</div>
@@ -135,7 +140,7 @@
 <div id="submitButtonContainer">
 
   <div id="holeDetailBackButton">
-    <a href="{% url 'rd3holelist' %}">
+    <a href="{% url 'rd1holelist' %}">
       <img id="holeDetailBackIcon" src="{% static 'icons/holeDetailBackYellow.svg' %}"></a></div>
 
   <button id="scoreSubmitButton" class="yellowBackground" type="submit">

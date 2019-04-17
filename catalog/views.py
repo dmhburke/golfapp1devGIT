@@ -76,6 +76,7 @@ def rd1holedetail(request,pk):
     hole_ctp = Rd1HoleModel.objects.get(pk=pk).CTP
     hole_ld = Rd1HoleModel.objects.get(pk=pk).LD
     selected_hole = Rd1HoleModel.objects.get(number=pk)
+    hole_tussle = Rd1HoleModel.objects.get(pk=pk).tussle
 
     
     #Count active players for dynamic loading
@@ -191,6 +192,7 @@ def rd1holedetail(request,pk):
         'form': form,
         'hole_ctp': hole_ctp,
         'hole_ld': hole_ld,
+        'hole_tussle': hole_tussle,
         }
 
     return render(request, 'rd1HoleDetail.html', context=context)
@@ -237,7 +239,7 @@ def rd2holedetail(request,pk):
     hole_ctp = Rd2HoleModel.objects.get(pk=pk).CTP
     hole_ld = Rd2HoleModel.objects.get(pk=pk).LD
     selected_hole = Rd2HoleModel.objects.get(number=pk)
-
+    hole_tussle = Rd1HoleModel.objects.get(pk=pk).tussle
     
     #Count active players for dynamic loading
     active_players = Rd2SlotModel.objects.filter(player_name__isnull=False).count()
@@ -352,6 +354,7 @@ def rd2holedetail(request,pk):
         'form': form,
         'hole_ctp': hole_ctp,
         'hole_ld': hole_ld,
+        'hole_tussle': hole_tussle,
         }
 
     return render(request, 'rd2HoleDetail.html', context=context)
@@ -398,6 +401,7 @@ def rd3holedetail(request,pk):
     hole_ctp = Rd3HoleModel.objects.get(pk=pk).CTP
     hole_ld = Rd3HoleModel.objects.get(pk=pk).LD
     selected_hole = Rd3HoleModel.objects.get(number=pk)
+    hole_tussle = Rd1HoleModel.objects.get(pk=pk).tussle
 
     
     #Count active players for dynamic loading
@@ -513,6 +517,7 @@ def rd3holedetail(request,pk):
         'form': form,
         'hole_ctp': hole_ctp,
         'hole_ld': hole_ld,
+        'hole_tussle': hole_tussle,
         }
 
     return render(request, 'rd3HoleDetail.html', context=context)
