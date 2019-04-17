@@ -699,7 +699,7 @@ a:link {
   background-image:
     linear-gradient(170deg,
       rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)),,
+      rgba(255, 255, 255, 0.6)),
     url(https://media.golfdigest.com/photos/5856c2cf2991c6d81317ebd3/master/w_768/2017-93-Crooked-Stick-GC-hole-11.jpg);
   background-position: 50% 50%;
   background-size: cover;
@@ -1576,7 +1576,12 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0 auto;
 }
 
-
+#backToTipEntry{
+  height: 50px;
+  width: 50px;
+  margin: 10px auto;
+  border-radius: 100%;
+}
 
 
 
