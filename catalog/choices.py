@@ -76,8 +76,8 @@ GAME_9 = (
 
 GAME_10 = (
     ("", "Select result"),
-    ("ISLANDERS", "Islanders"),
-    ("PENGUINS", "Penguins"),
+    ("HURRICANES", "Hurricanes"),
+    ("CAPITALS", "Capitals"),
     )
 
 #RESULTS CHECK - change empty result value
@@ -141,6 +141,6 @@ GAME_9R = (
 
 GAME_10R = (
     ("NOT_COMPLETE", "No result"),
-    ("ISLANDERS", "Islanders"),
-    ("PENGUINS", "Penguins"),
+    ("HURRICANES", "Hurricanes"),
+    ("CAPITALS", "Capitals"),
     )

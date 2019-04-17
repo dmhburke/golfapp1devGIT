@@ -1463,16 +1463,16 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-#islandersIMG {
-  background-image: url(https://media.giphy.com/media/xTiN0NaLs6XmLQyjXq/giphy.gif);
-  background-position: 50% 50%;
+#hurricanesIMG {
+  background-image: url(https://media3.giphy.com/media/26gsrmRc2bZ7JuyYM/source.gif);
+  background-position: 70% 50%;
   background-size: 160px;
   background-repeat: no-repeat;
 
 }
 
-#penguinsIMG {
-  background-image: url(https://media.giphy.com/media/26FmQGxZTETMR4BPy/giphy.gif);
+#capitalsIMG {
+  background-image: url(https://media.giphy.com/media/8AAO8HmNDcfZe/giphy.gif);
   background-position: 70% 0%;
   background-size: 160px;
   background-repeat: no-repeat;
