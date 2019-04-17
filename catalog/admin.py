@@ -39,7 +39,7 @@ admin.site.register(Rd1HoleModel, Rd1HoleModelAdmin)
 
 # Define new admin class - RD 1 SLOT
 class Rd1SlotModelAdmin(admin.ModelAdmin):
-     list_display = ('player_slot', 'player_name', 'player_holesplayed', 'player_score', 'player_stbl', 'player_rankscore',)
+     list_display = ('player_slot', 'player_name', 'player_holesplayed', 'player_score', 'player_stbl', 'player_rankscore', 'tussle_score',)
      ordering = ('player_slot',)
 
 # Register admin class

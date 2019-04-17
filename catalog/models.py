@@ -227,6 +227,7 @@ class Rd1SlotModel(models.Model):
     player_score = models.IntegerField(blank=True, null=True)
     player_stbl = models.IntegerField(blank=True, null=True)
     player_rankscore = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
+    tussle_score = models.IntegerField(blank=True, null=True)
 
     class Meta:
         ordering = ['-player_rankscore', 'player_name__HC']
@@ -400,66 +401,38 @@ def my_callback(sender, instance, **kwargs):
 
     player4total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=4,
-        defaults ={
-            'player_stbl': player4_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player4_stablefordtotal,},)
 
     player5total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=5,
-        defaults ={
-            'player_stbl': player5_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player5_stablefordtotal,},)
 
     player6total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=6,
-        defaults ={
-            'player_stbl': player6_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player6_stablefordtotal,},)
 
     player7total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=7,
-        defaults ={
-            'player_stbl': player7_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player7_stablefordtotal,},)
 
     player8total, created = Rd1SlotModel.objects.update_or_create(
-        player_slot=8,
-        defaults ={
-            'player_stbl': player8_stablefordtotal,
-            },
-        )
+        player_slot=8, defaults ={'player_stbl': player8_stablefordtotal,},)
 
     player9total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=9,
-        defaults ={
-            'player_stbl': player9_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player9_stablefordtotal,},)
 
     player10total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=10,
-        defaults ={
-            'player_stbl': player10_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player10_stablefordtotal,},)
 
     player11total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=11,
-        defaults ={
-            'player_stbl': player11_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player11_stablefordtotal,},)
 
     player12total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=12,
-        defaults ={
-            'player_stbl': player12_stablefordtotal,
-            },
-        )
+        defaults ={'player_stbl': player12_stablefordtotal,},)
 
 @receiver(post_save, sender=Rd1ScoreModel)
 def my_callback_two(sender, instance, **kwargs):
@@ -477,89 +450,82 @@ def my_callback_two(sender, instance, **kwargs):
     player11_holesplayed = Rd1ScoreModel.objects.filter(slot11_score__gt=0).count()
     player12_holesplayed = Rd1ScoreModel.objects.filter(slot12_score__gt=0).count()
 
+    player1_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot1_score')).values())[0]
+    player2_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot2_score')).values())[0]
+    player3_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot3_score')).values())[0]
+    player4_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot4_score')).values())[0]
+    player5_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot5_score')).values())[0]
+    player6_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot6_score')).values())[0]
+    player7_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot7_score')).values())[0]
+    player8_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot8_score')).values())[0]
+    player9_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot9_score')).values())[0]
+    player10_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot10_score')).values())[0]
+    player11_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot11_score')).values())[0]
+    player12_stroketotal = list(Rd1ScoreModel.objects.aggregate(Sum('slot12_score')).values())[0]
+    
+    tussle_hole = Rd1HoleModel.objects.filter(tussle__isnull=False)
+
+    tussle_sum1 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot1_stbl')).values())[0]
+    tussle_sum2 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot2_stbl')).values())[0]
+    tussle_sum3 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot3_stbl')).values())[0]
+    tussle_sum4 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot4_stbl')).values())[0]
+    tussle_sum5 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot5_stbl')).values())[0]
+    tussle_sum6 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot6_stbl')).values())[0]
+    tussle_sum7 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot7_stbl')).values())[0]
+    tussle_sum8 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot8_stbl')).values())[0]
+    tussle_sum9 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot9_stbl')).values())[0]
+    tussle_sum10 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot10_stbl')).values())[0]
+    tussle_sum11 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot11_stbl')).values())[0]
+    tussle_sum12 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot12_stbl')).values())[0]
+    
     player1total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=1,
-        defaults ={
-            'player_holesplayed': player1_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player1_holesplayed, 'player_score': player1_stroketotal, 'tussle_score': tussle_sum1,},)
 
     player2total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=2,
-        defaults ={
-            'player_holesplayed': player2_holesplayed,            
-            },
-        )
+        defaults ={'player_holesplayed': player2_holesplayed, 'player_score': player2_stroketotal, 'tussle_score': tussle_sum2,},)
 
     player3total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=3,
-        defaults ={
-            'player_holesplayed': player3_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player3_holesplayed, 'player_score': player3_stroketotal, 'tussle_score': tussle_sum3,},)
 
     player4total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=4,
-        defaults ={
-            'player_holesplayed': player4_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player4_holesplayed, 'player_score': player4_stroketotal, 'tussle_score': tussle_sum4,},)
 
     player5total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=5,
-        defaults ={
-            'player_holesplayed': player5_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player5_holesplayed, 'player_score': player5_stroketotal, 'tussle_score': tussle_sum5,},)
 
     player6total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=6,
-        defaults ={
-            'player_holesplayed': player6_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player6_holesplayed, 'player_score': player6_stroketotal, 'tussle_score': tussle_sum6,},)
 
     player7total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=7,
-        defaults ={
-            'player_holesplayed': player7_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player7_holesplayed, 'player_score': player7_stroketotal, 'tussle_score': tussle_sum7,},)
 
     player8total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=8,
-        defaults ={
-            'player_holesplayed': player8_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player8_holesplayed, 'player_score': player8_stroketotal, 'tussle_score': tussle_sum8,},)
 
     player9total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=9,
-        defaults ={
-            'player_holesplayed': player9_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player9_holesplayed, 'player_score': player9_stroketotal, 'tussle_score': tussle_sum9,},)
 
     player10total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=10,
-        defaults ={
-            'player_holesplayed': player10_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player10_holesplayed, 'player_score': player10_stroketotal, 'tussle_score': tussle_sum10,},)
 
     player11total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=11,
-        defaults ={
-            'player_holesplayed': player11_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player11_holesplayed, 'player_score': player11_stroketotal, 'tussle_score': tussle_sum11,},)
 
     player12total, created = Rd1SlotModel.objects.update_or_create(
         player_slot=12,
-        defaults ={
-            'player_holesplayed': player12_holesplayed,
-            },
-        )
+        defaults ={'player_holesplayed': player12_holesplayed, 'player_score': player12_stroketotal, 'tussle_score': tussle_sum12,},)
+    
 #RANKINGSCORES CALCS
     
     player1_stablefordtotal1 = list(Rd1StablefordModel.objects.aggregate(Sum('slot1_stbl')).values())[0]

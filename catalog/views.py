@@ -63,11 +63,24 @@ class rd1holelist (generic.ListView):
         ld_hole = Rd1HoleModel.objects.filter(LD__gt=0)
         tussle_hole = Rd1HoleModel.objects.filter(tussle__isnull=False)
 
+## Tussle calculation ##
         tussle_sum1 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot1_stbl')).values())[0]
+        tussle_sum2 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot2_stbl')).values())[0]
+        tussle_sum3 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot3_stbl')).values())[0]
+        tussle_sum4 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot4_stbl')).values())[0]
+        tussle_sum5 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot5_stbl')).values())[0]
+        tussle_sum6 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot6_stbl')).values())[0]
+        tussle_sum7 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot7_stbl')).values())[0]
+        tussle_sum8 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot8_stbl')).values())[0]
+        tussle_sum9 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot9_stbl')).values())[0]
+        tussle_sum10 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot10_stbl')).values())[0]
+        tussle_sum11 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot11_stbl')).values())[0]
+        tussle_sum12 = list(Rd1StablefordModel.objects.filter(hole__tussle="YES").aggregate(Sum('slot12_stbl')).values())[0]
 
+        
         context['ctp_hole'] = ctp_hole
         context['ld_hole'] = ld_hole
-## Tussle calculation ##
+
         context['tussle_sum1'] = tussle_sum1
         return context
 
