@@ -727,6 +727,7 @@ a:link {
   border-bottom: 3px solid #F8C145;
   width: 99%;
   margin: 0 auto;
+  position: relative;
 }
 
 #holeNumber {
@@ -816,11 +817,10 @@ input[type=number]::-webkit-outer-spin-button {
 
 .ctpSubmit {
   position: absolute;
-  top: 205px;
-  left: 94px;
+  top: 83px;
+  left: 75px;
   height: 30px;
   width: 190px;
-  z-index: 100;
 }
 
 #ctpLabelContainer {
@@ -861,6 +861,18 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 2px auto;
   -webkit-appearance: none;
   border: 0;
+}
+
+#tussleName {
+  height: 15px;
+  line-height: 15px;
+  width: 250px;
+  position: absolute;
+  top: -7px;
+  left: 45px;
+  z-index: 100;
+  text-align: center;
+  border-radius: 20px;
 }
 
 #scoreScrollContainer {
