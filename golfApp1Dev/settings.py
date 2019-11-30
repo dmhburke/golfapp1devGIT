@@ -27,7 +27,7 @@ SECRET_KEY = 'h6y7&-(ly87-jrdr6_8i&pre3_@t#%!54k5&yk*_aqjh5*)zdi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.par6golf.com', 'golfapp1dev.herokuapp.com', '127.0.0.1',]
+ALLOWED_HOSTS = ['indy.par6golf.com', 'golfapp1dev.herokuapp.com', '127.0.0.1',]
 
 
 # Application definition
